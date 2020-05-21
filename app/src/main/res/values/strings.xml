@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FootballApp</string>
+    <string-array name="top_players">
+        <item>Puskas</item>
+        <item>Pele</item>
+        <item>Maradona</item>
+        <item>Ronaldo</item>
+        <item>Messi</item>
+    </string-array>
+</resources>

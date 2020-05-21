@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EraActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="145dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="40dp"
+        android:onClick="startEra1"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/imageButton3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/era1" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:onClick="startEra2"
+        android:layout_width="145dp"
+        android:layout_height="122dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imageButton4"
+        app:srcCompat="@drawable/era2" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:onClick="startEra3"
+        android:layout_width="145dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@id/imageButton5"
+        app:srcCompat="@drawable/era3" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:onClick="startEra4"
+        android:layout_width="145dp"
+        android:layout_height="122dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintBottom_toTopOf="@id/imageButton6"
+        app:srcCompat="@drawable/era4" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:onClick="startEra5"
+        android:layout_width="145dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:srcCompat="@drawable/era5" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:onClick="startEra6"
+        android:layout_width="145dp"
+        android:layout_height="122dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:srcCompat="@drawable/era6" />
+</androidx.constraintlayout.widget.ConstraintLayout>
