@@ -1,10 +1,25 @@
 <resources>
     <string name="app_name">FootballApp</string>
+    <string name="title_top">Die 5 besten Spieler aller Zeiten</string>
+    <string name="select_top">Wählen Sie einen Spieler aus!</string>
+    <string name="image_content_description_top">Spielers Gesicht</string>
+    <string name="player_puskas">Ferenc Puskás</string>
+    <string name="player_pele">Pelé</string>
+    <string name="player_maradona">Diego Maradona</string>
+    <string name="player_ronaldo">Cristiano Ronaldo</string>
+    <string name="player_messi">Lionel Messi</string>
+    <string name="player_not_selected">Bitte auswählen!</string>
+    <string name="description_puskas">Ungarns berühmtester Spieler hat in Budapest Honvéd und Real Madrid in 539 Spiele 514 Tore geschossen. Vize-Weltmeister und olympischer Meister, achtmal Torschützenkönig in Ungarn und Spanien.</string>
+    <string name="description_pele">Test2Test2Test2Test2Test2Test2Test2Test2Test2Test2Test2Test2Test2Test2Test2Test2Test2</string>
+    <string name="description_maradona">Test3Test3Test3Test3Test3Test3Test3Test3Test3Test3Test3Test3Test3Test3Test3Test3</string>
+    <string name="description_ronaldo">Test4Test4Test4Test4Test4Test4Test4Test4Test4Test4Test4Test4Test4Test4Test4Test4jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</string>
+    <string name="description_messi">Test5Test5Test5Test5Test5Test5Test5Test5Test5Test5Test5Test5Test5Test5Test5Test5</string>
     <string-array name="top_players">
-        <item>Puskas</item>
-        <item>Pele</item>
-        <item>Maradona</item>
-        <item>Ronaldo</item>
-        <item>Messi</item>
+        <item>Spieler</item>
+        <item>Ferenc Puskás</item>
+        <item>Pelé</item>
+        <item>Diego Maradona</item>
+        <item>Cristiano Ronaldo</item>
+        <item>Lionel Messi</item>
     </string-array>
 </resources>
