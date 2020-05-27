@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/item1"
+    <item android:id="@+id/itemMain"
+        android:title="Hauptseite"
+        app:showAsAction="never"/>
+    <item android:id="@+id/itemEra"
         android:title="Ära"
         app:showAsAction="never"/>
-    <item android:id="@+id/item2"
+    <item android:id="@+id/itemTop5"
         android:title="Top5"
         app:showAsAction="never"/>
-    <item android:id="@+id/item3"
+    <item android:id="@+id/itemMedia"
         android:title="Media"
+        app:showAsAction="never"/>
+    <item android:id="@+id/itemQuiz"
+        android:title="Quiz"
+        app:showAsAction="never"/>
+    <item android:id="@+id/itemTest"
+        android:title="Test"
         app:showAsAction="never"/>
 
 </menu>
