@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -33,53 +34,57 @@ public class TopActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 TextView textName = findViewById(R.id.textViewTopPlayerName);
                 TextView text = findViewById(R.id.textViewTopPlayerDescpription);
-                ImageView image = findViewById(R.id.imageViewTopPlayerImage);
                 switch (position) {
                     case 0:
                         Toast.makeText(TopActivity.this, R.string.player_not_selected, Toast.LENGTH_SHORT).show();
-                        image.setVisibility(View.INVISIBLE);
                         text.setVisibility(View.INVISIBLE);
                         textName.setVisibility(View.INVISIBLE);
+                        text.setCompoundDrawables(null, null, null, null);
                         break;
                     case 1:
-                        image.setImageResource(R.drawable.playerimg1puskas);
-                        image.setVisibility(View.VISIBLE);
                         text.setText(R.string.description_puskas);
                         text.setVisibility(View.VISIBLE);
                         textName.setText(R.string.player_puskas);
                         textName.setVisibility(View.VISIBLE);
+                        Drawable pic1 = getApplicationContext().getResources().getDrawable(R.drawable.playerimg1puskas);
+                        pic1.setBounds(0, 0, pic1.getIntrinsicWidth(), pic1.getIntrinsicHeight());
+                        text.setCompoundDrawables(null, pic1, null, null);
                         break;
                     case 2:
-                        image.setImageResource(R.drawable.playerimg2pele);
-                        image.setVisibility(View.VISIBLE);
                         text.setText(R.string.description_pele);
                         text.setVisibility(View.VISIBLE);
                         textName.setText(R.string.player_pele);
                         textName.setVisibility(View.VISIBLE);
+                        Drawable pic2 = getApplicationContext().getResources().getDrawable(R.drawable.playerimg2pele);
+                        pic2.setBounds(0, 0, pic2.getIntrinsicWidth(), pic2.getIntrinsicHeight());
+                        text.setCompoundDrawables(null, pic2, null, null);
                         break;
                     case 3:
-                        image.setImageResource(R.drawable.playerimg3maradona);
-                        image.setVisibility(View.VISIBLE);
                         text.setText(R.string.description_maradona);
                         text.setVisibility(View.VISIBLE);
                         textName.setText(R.string.player_maradona);
                         textName.setVisibility(View.VISIBLE);
+                        Drawable pic3 = getApplicationContext().getResources().getDrawable(R.drawable.playerimg3maradona);
+                        pic3.setBounds(0, 0, pic3.getIntrinsicWidth(), pic3.getIntrinsicHeight());
+                        text.setCompoundDrawables(null, pic3, null, null);
                         break;
                     case 4:
-                        image.setImageResource(R.drawable.playerimg4ronaldo);
-                        image.setVisibility(View.VISIBLE);
                         text.setText(R.string.description_ronaldo);
                         text.setVisibility(View.VISIBLE);
                         textName.setText(R.string.player_ronaldo);
                         textName.setVisibility(View.VISIBLE);
+                        Drawable pic4 = getApplicationContext().getResources().getDrawable(R.drawable.playerimg4ronaldo);
+                        pic4.setBounds(0, 0, pic4.getIntrinsicWidth(), pic4.getIntrinsicHeight());
+                        text.setCompoundDrawables(null, pic4, null, null);
                         break;
                     case 5:
-                        image.setImageResource(R.drawable.playerimg5messi);
-                        image.setVisibility(View.VISIBLE);
                         text.setText(R.string.description_messi);
                         text.setVisibility(View.VISIBLE);
                         textName.setText(R.string.player_messi);
                         textName.setVisibility(View.VISIBLE);
+                        Drawable pic5 = getApplicationContext().getResources().getDrawable(R.drawable.playerimg5messi);
+                        pic5.setBounds(0, 0, pic5.getIntrinsicWidth(), pic5.getIntrinsicHeight());
+                        text.setCompoundDrawables(null, pic5, null, null);
                         break;
 
                 }
@@ -91,6 +96,7 @@ public class TopActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -125,10 +131,10 @@ public class TopActivity extends AppCompatActivity {
                 Intent intent5 = new Intent(this, TestActivity.class);
                 startActivity(intent5);
                 break;
-        };
+        }
+        ;
         return true;
     }
-
 
 
 }

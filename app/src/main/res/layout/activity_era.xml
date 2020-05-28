@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="ZEITPERIODE"
+            android:text="@string/title_era"
             android:textColor="@android:color/white"
             android:textSize="34sp"
             android:textStyle="bold" />
@@ -94,7 +94,7 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:drawableTop="@drawable/per1edit"
                     android:onClick="startEra1"
-                    android:text="1857-1890"
+                    android:text="@string/era1_time"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="20sp" />
@@ -122,7 +122,7 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:drawableTop="@drawable/per2edit"
                     android:onClick="startEra2"
-                    android:text="1890-1918"
+                    android:text="@string/era2_time"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="20sp" />
@@ -150,7 +150,7 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:drawableTop="@drawable/per3edit"
                     android:onClick="startEra3"
-                    android:text="1918-1954"
+                    android:text="@string/era3_time"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="20sp" />
@@ -178,7 +178,7 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:drawableTop="@drawable/per4edit"
                     android:onClick="startEra4"
-                    android:text="1954-1985"
+                    android:text="@string/era4_time"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="20sp" />
@@ -206,7 +206,7 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:drawableTop="@drawable/per5edit"
                     android:onClick="startEra5"
-                    android:text="1985-2004"
+                    android:text="@string/era5_time"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="20sp" />
@@ -233,7 +233,7 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:drawableTop="@drawable/per6edit"
                     android:onClick="startEra6"
-                    android:text="2004-"
+                    android:text="@string/era6_time"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="20sp" />

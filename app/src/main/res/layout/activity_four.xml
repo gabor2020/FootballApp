@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="1954-1985"
+                android:text="@string/era4_time"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="30sp" />
@@ -32,7 +32,7 @@
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Gründung der UEFA"
+                android:text="@string/era4_title"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="30sp" />
@@ -46,8 +46,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="20dp"
-                android:text="TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText"
-                android:textAlignment="center" />
+                android:text="@string/era4_description"
+                android:textAlignment="center"
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -56,6 +57,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="40dp"
+                android:contentDescription="@string/image_content_description_era"
                 app:srcCompat="@drawable/era4pic" />
 
         </LinearLayout>

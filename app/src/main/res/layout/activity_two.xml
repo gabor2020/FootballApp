@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="1890-1918"
+                android:text="@string/era2_time"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="30sp" />
@@ -32,7 +32,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fußball wird international"
+                android:text="@string/era2_titel"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="30sp" />
@@ -46,7 +46,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="10dp"
-                android:text="gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
+                android:text="@string/era2_description"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
@@ -58,6 +58,7 @@
 
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="40dp"
+                android:contentDescription="@string/image_content_description_era"
                 app:srcCompat="@drawable/era2pic" />
         </LinearLayout>
 
