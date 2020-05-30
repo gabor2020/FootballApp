@@ -1,24 +1,61 @@
 package at.home.gabor.footballapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 public class MediaActivity extends AppCompatActivity {
 
+    private ViewPager viewPager;
+    public PageAdapter pagerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_media);
+
+        TabLayout tabLayout = findViewById(R.id.tabLayoutMedia);
+        TabItem tab1 = findViewById(R.id.tabMediaFotos);
+        TabItem tab2 = findViewById(R.id.tabMediaVideos);
+        viewPager = findViewById(R.id.viewPagerMedia);
+
+        pagerAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(pagerAdapter);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+                if (tab.getPosition() == 0) {
+                    pagerAdapter.notifyDataSetChanged();
+                } else if (tab.getPosition() == 1) {
+                    pagerAdapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
     }
 
     @Override
@@ -51,11 +88,8 @@ public class MediaActivity extends AppCompatActivity {
                 Intent intent4 = new Intent(this, QuizActivity.class);
                 startActivity(intent4);
                 break;
-            case R.id.itemTest:
-                Intent intent5 = new Intent(this, TestActivity.class);
-                startActivity(intent5);
-                break;
-        };
+
+        }
         return true;
     }
 

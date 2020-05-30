@@ -22,7 +22,6 @@
         <item>Cristiano Ronaldo</item>
         <item>Lionel Messi</item>
     </string-array>
-    <string name="title_activity_test">TestActivity</string>
     <string name="tab_text_1">Fotos</string>
     <string name="tab_text_2">Videos</string>
     <string name="text_title_main">Fußball App</string>
@@ -48,4 +47,9 @@
     <string name="era5_description">Das Fußballspiel wurde in den kommenden Jahren immer populärer, die Massenmedien und die Entwicklung des Fernsehens steigerten das weltweite Interesse am Fußball. Bei der Qualifikation zur Fußball-Weltmeisterschaft 2002 waren 198 Nationalmannschaften gemeldet. Im Weltfußballverband FIFA sind mit 208 Mitgliedern mehr Länder vertreten als in den Vereinten Nationen (192). </string>
     <string name="era6_title">Zeit der Superstars</string>
     <string name="era6_description">Die Popularität der besten Fußballer ist größer heutzutage, als je zuvor. Spieler wie Messi, Neymar oder Ronaldo haben über 100 Millionen Follower auf Social Media. Ihr Einfluss auf das Spiel ist riesig und können alleine Meisterschaften entscheiden.</string>
+    <string name="menu_title_main">Hauptseite</string>
+    <string name="menu_title_era">Ära</string>
+    <string name="menu_title_top">Top5</string>
+    <string name="menu_title_media">Media</string>
+    <string name="menu_title_quiz">Quiz</string>
 </resources>

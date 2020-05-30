@@ -9,7 +9,7 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutMedia"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,17 +18,19 @@
         app:tabGravity="fill"
         app:tabIndicatorColor="@android:color/white"
         app:tabIndicatorHeight="5dp"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
         app:tabTextColor="@android:color/white">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabMediaFotos"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tab_text_1" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabMediaVideos"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tab_text_2" />
 

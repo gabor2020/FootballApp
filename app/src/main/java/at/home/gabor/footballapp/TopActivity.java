@@ -127,12 +127,8 @@ public class TopActivity extends AppCompatActivity {
                 Intent intent4 = new Intent(this, QuizActivity.class);
                 startActivity(intent4);
                 break;
-            case R.id.itemTest:
-                Intent intent5 = new Intent(this, TestActivity.class);
-                startActivity(intent5);
-                break;
+
         }
-        ;
         return true;
     }
 
