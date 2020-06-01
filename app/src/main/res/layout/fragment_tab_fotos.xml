@@ -12,6 +12,7 @@
     tools:context=".TabFotos">
 
     <ImageView
+        android:id="@+id/image1_fotos"
         android:layout_width="100dp"
         android:layout_height="200dp"
         android:layout_row="0"
@@ -19,9 +20,8 @@
         android:layout_column="0"
         android:layout_columnSpan="1"
         android:layout_columnWeight="1"
-
         android:scaleType="centerCrop"
-        android:src="@drawable/playerimg1puskas" />
+        android:src="@drawable/gallery1" />
 
     <ImageView
         android:layout_width="100dp"
@@ -31,9 +31,8 @@
         android:layout_column="1"
         android:layout_columnSpan="1"
         android:layout_columnWeight="1"
-
         android:scaleType="centerCrop"
-        android:src="@drawable/playerimg2pele" />
+        android:src="@drawable/gallery2" />
 
     <ImageView
         android:layout_width="100dp"
@@ -44,7 +43,7 @@
         android:layout_columnSpan="1"
         android:layout_columnWeight="1"
         android:scaleType="centerCrop"
-        android:src="@drawable/playerimg1puskas" />
+        android:src="@drawable/gallery3" />
 
     <ImageView
         android:layout_width="100dp"
@@ -55,7 +54,9 @@
         android:layout_columnSpan="1"
         android:layout_columnWeight="1"
         android:scaleType="centerCrop"
-        android:src="@drawable/playerimg2pele" />
+        android:src="@drawable/gallery4" />
+
 
 
 </GridLayout>
+
