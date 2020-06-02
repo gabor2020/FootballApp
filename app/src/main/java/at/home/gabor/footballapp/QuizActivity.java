@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,4 +53,11 @@ public class QuizActivity extends AppCompatActivity {
         return true;
     }
 
+
+    public void startQuizActivity(View view) {
+        Intent intent = new Intent(this, QuizStartedActivity.class);
+        startActivity(intent);
+    }
 }
+
+
