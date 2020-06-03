@@ -1,19 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FootballApp</string>
     <string name="title_top">Die 5 besten Spieler aller Zeiten</string>
     <string name="select_top">Wählen Sie einen Spieler aus!</string>
     <string name="image_content_description_top">Spielers Gesicht</string>
     <string name="player_puskas">Ferenc Puskás</string>
-    <string name="player_pele" translatable="false">Pelé</string>
-    <string name="player_maradona" translatable="false">Diego Maradona</string>
-    <string name="player_ronaldo" translatable="false">Cristiano Ronaldo</string>
-    <string name="player_messi" translatable="false">Lionel Messi</string>
     <string name="player_not_selected">Bitte auswählen!</string>
     <string name="description_puskas">Ungarns berühmtester Spieler hat in Budapest Honvéd und Real Madrid in 539 Spielen 514 Tore geschossen. Vize-Weltmeister und olympischer Meister, achtmaliger Torschützenkönig in Ungarn und Spanien.</string>
     <string name="description_pele">Das südamerikanische Wunderkind gewann mit der brasilianischen Nationalmannschaft dreimal die Fußball-Weltmeisterschaft. Mit 77 Treffern in 92 Länderspielen ist der ehemalige Stürmer Rekordtorschütze der brasilianischen Nationalmannschaft. Pelé gewann mit dem FC Santos in 17 Jahren insgesamt 26 nationale und internationale Titel.</string>
     <string name="description_maradona">Diego Armando Maradona gilt als einer der besten Fußballspieler der Geschichte. Er führte als Mannschaftskapitän die Argentinische Nationalmannschaft zum Gewinn der Weltmeisterschaft 1986. Insgesamt nahm er an vier WM-Turnieren teil und erzielte in 91 Länderspielen 34 Tore.</string>
     <string name="description_ronaldo">In der Jugendakademie von Sporting Lissabon ausgebildet, Cristiano Ronaldo wurde mit 18 Jahren von Manchester United unter Vertrag genommen und entwickelte sich dort zu einem Weltklassefußballer. Ronaldo ist der einzige Fußballer, der in England, Spanien und Italien Meister sowie als Fußballer des Jahres ausgezeichnet wurde.</string>
     <string name="description_messi">Von vielen Experten als der beste Fußballspieler aller Zeiten betrachtet, Lionel Messi ist mit sechs Titeln Rekordgewinner des FIFA-Weltfußballer des Jahres. Mit dem FC Barcelona gewann er unter anderem vier Champions-League-Titel, zehn Mal die spanische Meisterschaft und sechs Mal den spanischen Pokalwettbewerb Copa del Rey.</string>
+    <string name="tab_text_1">Fotos</string>
+    <string name="tab_text_2">Videos</string>
+    <string name="text_title_main">Fußball App</string>
+    <string name="text_decription_main">Fußball, der beliebteste Sport der Welt entstand in der zweiten Hälfte des 19. Jahrhunderts in Großbritannien und breitete sich ab den 1880er und 1890er Jahren in Kontinentaleuropa und anderen Kontinenten aus.</string>
+    <string name="image_main">Startbild</string>
+    <string name="title_era">ZEITPERIODE</string>
+    <string name="era1_title">Der Anfang</string>
+    <string name="era1_description">An englischen Privatschulen und Universitäten wurde Fußball zur „Leibesertüchtigung“ immer populärer. 1857 wurde der weltweit erste Klub für Association football, der FC Sheffield gegründet. England gilt vor allem heute als Mutterland des Fußballs, weil 1863 in London die Football Association (FA) gegründet wurde und das umfangreiche Regelwerk die Entwicklung des gesamten Fußballs förderte.</string>
+    <string name="image_content_description_era">Fußballspiel</string>
+    <string name="era2_titel">Fußball wird international</string>
+    <string name="era2_description">Im Kontinentaleuropa konnte sich der Fußball vor allem in der Schweiz durchsetzen. Von der Schweiz aus wurde der Fußball in die umliegenden Länder exportiert: Der von Schweizern gegründete Stade Helvétique Marseille wurde 1909 französischer Meister, der FC Barcelona wiederum wurde von Joan Gamper gegründet. Da der nationalistisch orientierte Milan Cricket and Football Club keine Ausländer akzeptierte, wurde von Schweizern und Italienern der Verein Inter Mailand gegründet.</string>
+    <string name="era3_title">Von Amateur zu Profi</string>
+    <string name="era3_description">Die ersten Profiligen entstanden in der Zwischenkriegszeit. Österreich war mit der Einführung einer Profi-Liga im Jahre 1924 der erste kontinentaleuropäische Staat mit einer Liga für Berufsfußballspieler. Drei Jahre später initiierte der Österreichische Fußball-Bund mit dem Mitropacup den ersten bedeutenden internationalen Wettbewerb für Vereinsmannschaften in Europa. Der Mitropacup gilt als Vorläufer des heutigen Fußball-Europapokals.</string>
+    <string name="era4_title">Gründung der UEFA</string>
+    <string name="era4_description">Der europäische Fußballverband UEFA wurde 1954 in Basel in der Schweiz gegründet. Die UEFA richtete bereits 1955/56 den ersten Europapokal der Landesmeister aus. 1960 fand erstmals der Europapokal der Nationen statt, der acht Jahre später in Europameisterschaft umbenannt wurde.</string>
+    <string name="era5_title">Massenmedien</string>
+    <string name="era5_description">Das Fußballspiel wurde in den kommenden Jahren immer populärer, die Massenmedien und die Entwicklung des Fernsehens steigerten das weltweite Interesse am Fußball. Bei der Qualifikation zur Fußball-Weltmeisterschaft 2002 waren 198 Nationalmannschaften gemeldet. Im Weltfußballverband FIFA sind mit 208 Mitgliedern mehr Länder vertreten als in den Vereinten Nationen (192).</string>
+    <string name="era6_title">Zeit der Superstars</string>
+    <string name="era6_description">Die Popularität der besten Fußballer ist größer heutzutage, als je zuvor. Spieler wie Messi, Neymar oder Ronaldo haben über 100 Millionen Follower auf Social Media. Ihr Einfluss auf das Spiel ist riesig und können alleine Meisterschaften entscheiden.</string>
+    <string name="menu_title_main">Hauptseite</string>
+    <string name="menu_title_era">Ära</string>
+    <string name="menu_title_top">Top5</string>
+    <string name="menu_title_media">Media</string>
+    <string name="menu_title_quiz">Quiz</string>
     <string-array name="top_players">
         <item>Spieler</item>
         <item>Ferenc Puskás</item>
@@ -22,34 +43,4 @@
         <item>Cristiano Ronaldo</item>
         <item>Lionel Messi</item>
     </string-array>
-    <string name="tab_text_1">Fotos</string>
-    <string name="tab_text_2">Videos</string>
-    <string name="text_title_main">Fußball App</string>
-    <string name="image_main">Startbild</string>
-    <string name="text_decription_main">Fußball, der beliebteste Sport der Welt entstand in der zweiten Hälfte des 19. Jahrhunderts in Großbritannien und breitete sich ab den 1880er und 1890er Jahren in Kontinentaleuropa und anderen Kontinenten aus.</string>
-    <string name="title_era">ZEITPERIODE</string>
-    <string name="era1_time" translatable="false">1857-1890</string>
-    <string name="era2_time" translatable="false">1890-1918</string>
-    <string name="era3_time" translatable="false">1918-1954</string>
-    <string name="era4_time" translatable="false">1954-1985</string>
-    <string name="era5_time" translatable="false">1985-2004</string>
-    <string name="era6_time" translatable="false">2004-</string>
-    <string name="era1_title">Der Anfang</string>
-    <string name="era1_description">An englischen Privatschulen und Universitäten wurde Fußball zur „Leibesertüchtigung“ immer populärer. 1857 wurde der weltweit erste Klub für Association football, der FC Sheffield gegründet. England gilt vor allem heute als Mutterland des Fußballs, weil 1863 in London die Football Association (FA) gegründet wurde und das umfangreiche Regelwerk die Entwicklung des gesamten Fußballs förderte.</string>
-    <string name="image_content_description_era">Fußballspiel</string>
-    <string name="era2_titel">Fußball wird international</string>
-    <string name="era2_description">Im Kontinentaleuropa konnte sich der Fußball vor allem in der Schweiz durchsetzen. Von der Schweiz aus wurde der Fußball in die umliegenden Länder exportiert: Der von Schweizern gegründete Stade Helvétique Marseille wurde 1909 französischer Meister, der FC Barcelona wiederum wurde von Joan Gamper gegründet. Da der nationalistisch orientierte Milan Cricket and Football Club keine Ausländer akzeptierte, wurde von Schweizern und Italienern der Verein Inter Mailand gegründet. </string>
-    <string name="era3_title">Von Amateur zu Profi</string>
-    <string name="era3_description">Die ersten Profiligen entstanden in der Zwischenkriegszeit. Österreich war mit der Einführung einer Profi-Liga im Jahre 1924 der erste kontinentaleuropäische Staat mit einer Liga für Berufsfußballspieler. Drei Jahre später initiierte der Österreichische Fußball-Bund mit dem Mitropacup den ersten bedeutenden internationalen Wettbewerb für Vereinsmannschaften in Europa. Der Mitropacup gilt als Vorläufer des heutigen Fußball-Europapokals. </string>
-    <string name="era4_title">Gründung der UEFA</string>
-    <string name="era4_description">Der europäische Fußballverband UEFA wurde 1954 in Basel in der Schweiz gegründet. Die UEFA richtete bereits 1955/56 den ersten Europapokal der Landesmeister aus. 1960 fand erstmals der Europapokal der Nationen statt, der acht Jahre später in Europameisterschaft umbenannt wurde. </string>
-    <string name="era5_title">Massenmedien</string>
-    <string name="era5_description">Das Fußballspiel wurde in den kommenden Jahren immer populärer, die Massenmedien und die Entwicklung des Fernsehens steigerten das weltweite Interesse am Fußball. Bei der Qualifikation zur Fußball-Weltmeisterschaft 2002 waren 198 Nationalmannschaften gemeldet. Im Weltfußballverband FIFA sind mit 208 Mitgliedern mehr Länder vertreten als in den Vereinten Nationen (192). </string>
-    <string name="era6_title">Zeit der Superstars</string>
-    <string name="era6_description">Die Popularität der besten Fußballer ist größer heutzutage, als je zuvor. Spieler wie Messi, Neymar oder Ronaldo haben über 100 Millionen Follower auf Social Media. Ihr Einfluss auf das Spiel ist riesig und können alleine Meisterschaften entscheiden.</string>
-    <string name="menu_title_main">Hauptseite</string>
-    <string name="menu_title_era">Ära</string>
-    <string name="menu_title_top">Top 5</string>
-    <string name="menu_title_media">Media</string>
-    <string name="menu_title_quiz">Quiz</string>
 </resources>

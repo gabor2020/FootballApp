@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itemLanguage"
+        android:icon="@drawable/ic_language_icon"
+        android:title="Sprache"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/itemEn"
+                android:icon="@drawable/ukflag"
+                android:title="English"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/itemGe"
+                android:icon="@drawable/austriaflag"
+                android:title="Deutsch"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/itemHu"
+                android:icon="@drawable/hungaryflag"
+                android:title="Magyar"
+                app:showAsAction="always" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/site_navigation1"
+        android:title="Navigation"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_navigation">
+        <menu>
+            <item
+                android:id="@+id/itemMain1"
+                android:title="@string/menu_title_main"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/itemEra1"
+                android:title="@string/menu_title_era"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/itemTop51"
+                android:title="@string/menu_title_top"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/itemMedia1"
+                android:title="@string/menu_title_media"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/itemQuiz1"
+                android:title="@string/menu_title_quiz"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

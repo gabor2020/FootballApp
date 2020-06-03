@@ -31,4 +31,16 @@
     <string name="era4_description">The Union of European Football Associations was founded in 1954 in the Swiss city of Basel. In 1955/56 the UEFA already organized the first European Cup for national champions. In 1960 the European Nation\'s Cup was launched, taking the name UEFA European Championship eight years later.</string>
     <string name="era5_description">The game became in the following years even more popular, the mass media and the development in televised broadcasting lifted the global interest in football. In the qualification phase of Euro 2002 198 national teams were admitted. Currently with 208 nations, the World Football Federation FIFA has more members as countries represented in the United Nations (192).</string>
     <string name="era6_description">Today the popularity of the best footballers is bigger than ever. Players like Messi, Neymar or Ronaldo have more than 100 Million followers on social media. Their influence on the game is huge and they can singlehandedly decide the fate of tournaments.</string>
+    <string name="player_puskas">Ferenc Puskás</string>
+    <string name="menu_title_top">Top5</string>
+    <string name="menu_title_media">Media</string>
+    <string name="menu_title_quiz">Quiz</string>
+    <string-array name="top_players">
+        <item>Player</item>
+        <item>Ferenc Puskás</item>
+        <item>Pelé</item>
+        <item>Diego Maradona</item>
+        <item>Cristiano Ronaldo</item>
+        <item>Lionel Messi</item>
+    </string-array>
 </resources>
