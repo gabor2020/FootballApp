@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FootballApp</string>
+    <string name="player_puskas">Puskás Ferenc</string>
+    <string name="title_era">ÉRA</string>
+    <string name="era1_title">A kezdetek</string>
+    <string name="player_not_selected">Kérem válasszon!</string>
+    <string name="image_content_description_top">Játékos arca</string>
+    <string name="select_top">Válasszon ki egy játékost!</string>
+    <string name="title_top">Minden idők 5 legjobbja</string>
+    <string name="tab_text_1">Képek</string>
+    <string name="tab_text_2">Videók</string>
+    <string name="text_title_main">Futball App</string>
+    <string name="image_main">Kezdőkép</string>
+    <string name="image_content_description_era">Futballmeccs</string>
+    <string name="era2_titel">Nemzetközi terjeszkedés</string>
+    <string name="era3_title">A professzionalizmus</string>
+    <string name="era4_title">Az UEFA megalapítása</string>
+    <string name="era5_title">Tömegmédia</string>
+    <string name="era6_title">Szupersztárok kora</string>
+    <string name="menu_title_main">Főoldal</string>
+    <string name="menu_title_era">Éra</string>
+    <string name="menu_title_top">Top5</string>
+    <string name="menu_title_media">Média</string>
+    <string name="menu_title_quiz">Kvíz</string>
+    <string name="description_puskas">A leghíresebb magyar labdarúgó a Budapesti Honvédban és a Real Madridban 539 mérkőzésen 514 gólt lőtt. Világbajnoki második és olimpiai bajnok, összesen nyolc gólkirályi címet nyert Magyarországon és Spanyolországban.</string>
+    <string name="description_pele">A dél-amerikai csodagyerek háromszor nyert világbajnokságot a brazil válogatottal. 92 nemzetközi mérkőzésen szerzett 77 góljával ő a valaha volt legeredményesebb brazil csatár. Pelé az FC Santos színeiben 17 év alatt összesen 26 hazai és nemzetközi címet nyert.</string>
+    <string name="description_maradona">Diego Armando Maradonát a futballtörténet egyik legjobb játékosának tartják. Csapatkapitányként az argentin válogatottat 1986-ban vb-győzelemig vezette. Összesen négy világbajnokságon vett részt, 91 válogatott mérkőzésén 31 gólt szerzett.</string>
+    <string name="description_ronaldo">A Sporting Lisszabonban nevelkedett Cristiano Ronaldo 18 évesen igazolt a Manchester United csapatához, ahol hamarosan világklasszis játékossá fejlődött. Ronaldo az egyetlen labdarúgó, aki Angliában, Spanyolországban és Olaszországban is bajnok lett és az év játékosának is megválasztották.</string>
+    <string name="description_messi">"A sokak által a valaha volt legjobb labdarúgónak tartott Lionel Messi nyolc alkalommal nyerte el az Aranylabdát. Az FC Barcelonával többek között négy Bajnokok Ligája, tíz spanyol bajnoki és hat Spanyol Kupagyőztes-címet szerzett. "</string>
+    <string name="text_decription_main">A labdarúgás, a világ legnépszerűbb sportja a 19. század második felében született meg Nagy-Britanniában és terjedt el az 1880-as és 1890-es években Európában és a világ más részein.</string>
+    <string name="era1_description">Az angol magániskolákban és egyetemeken a futball egyre népszerűbb testgyakorlás lett. 1857-ben megalakult a világ első futballklubja, az FC Sheffield. Anglia számít a modern futball szülőhelyének, mivel itt alakult meg 1863-ban Londonban az angol Labdarúgó Szövetség (FA), amely elsőként dolgozta ki a labdarúgás átfogó szabályrendszerét.</string>
+    <string name="era2_description">A kontinensen először Svájcban vetette meg a lábát a futball. Innen terjedt szét a labdarúgás a környező országokba: a svájciak által alapított Stade Helvétique Marseille 1909-ban francia bajnok lett, az FC Barcelona pedig a svájci Joan Gamper ötletéből született meg. Mivel a nemzeties irányultságú milánói Cricket and Football Club nem fogadott be külföldieket, svájci és olasz játékosok megalapították az FC Internazionalét.</string>
+    <string name="era4_description">Az Európai Labdarúgó Szövetséget 1954-ben a svájci Bázelban alapították. Az UEFA már az 1955/56-os szezonban megrendezte az első Bajnokcsapatok Európakupáját. 1960-ban indult útjára az Európai Nemzetek Kupája, amely nyolc évvel később vette fel a labdarúgó-Európa-bajnokság nevet.</string>
+    <string name="era3_description">Az első profi bajnokságok a két világháború között indultak. Ausztria volt az első ország, ahol a bajnokságban fizetett játékosok léptek pályára 1924-ben. Három évvel később az Osztrák Labdarúgó Szövetség indította el a híres Középeurópa-Kupát, az első jelentős nemzetközi kupaversengést klubcsapatok számára. A KK számít a mai Bajnokok Ligája előfutárának.</string>
+    <string name="era5_description">Köszönhetően a tömegmédiának és a televíziós technika fejlődésének a labdarúgás egyre népszerűbb lett, immár globális érdeklődést kiváltva. A 2002-es Világbajnokság selejtezőire 198 nemzeti válogatott nevezett. Ma a FIFA 208 tagjával több országot képvisel, mint az Egyesült Nemzetek Szervezete (192).</string>
+    <string name="era6_description">Napjainkban a legjobb játékosok népszerűsége nagyobb, mint valaha. Az olyan futballisták, mint Messi, Neymar vagy Ronaldo 100 millió fölötti követővel rendelkeznek a közösségi médiában. Hatásuk és befolyásuk a labdarúgásra óriási.</string>
+</resources>
