@@ -1,10 +1,15 @@
 package at.home.gabor.footballapp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -92,5 +97,39 @@ public class MediaActivity extends AppCompatActivity {
         }
         return true;
     }
+
+    int imageSource;
+    public void setPic1(View view) {
+        imageSource = R.drawable.gallery1;
+        startPicActivity(imageSource);
+    }
+    public void setPic2(View view) {
+        imageSource = R.drawable.gallery2;
+        startPicActivity(imageSource);
+    }
+    public void setPic3(View view) {
+        imageSource = R.drawable.gallery3;
+        startPicActivity(imageSource);
+    }
+    public void setPic4(View view) {
+        imageSource = R.drawable.gallery4;
+        startPicActivity(imageSource);
+    }
+    public void setPic5(View view) {
+        imageSource = R.drawable.gallery5;
+        startPicActivity(imageSource);
+    }
+    public void setPic6(View view) {
+        imageSource = R.drawable.gallery6;
+        startPicActivity(imageSource);
+    }
+
+    public void startPicActivity(int imageSource) {
+        Intent intent = new Intent(this, FullscreenActivity.class);
+        intent.putExtra("ImageToShow", imageSource);
+        startActivity(intent);
+    }
+
+
 
 }

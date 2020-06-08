@@ -1,27 +1,42 @@
 package at.home.gabor.footballapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            outState.putString("my_text", getResources().getConfiguration().getLocales().get(0).getLanguage());
+        }else outState.putString("my_text", getResources().getConfiguration().locale.getLanguage());
+        super.onSaveInstanceState(outState);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (savedInstanceState != null){
+            setAppLocale(Objects.requireNonNull(savedInstanceState.getString("my_text")));}
     }
+
 
     public void startEra(View view) {
         Intent intent = new Intent(this, EraActivity.class);
@@ -81,12 +96,13 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void setHungarian() {
+    String localeCode;
+
+    public void setHungarian() {
         localeCode = "hu";
         setAppLocale(localeCode);
     }
 
-    String localeCode;
 
     public void setEnglish() {
         localeCode = "en";
@@ -105,9 +121,12 @@ public class MainActivity extends AppCompatActivity {
         Configuration conf = res.getConfiguration();
         conf.setLocale(new Locale(localeCode.toLowerCase()));
         res.updateConfiguration(conf, dm);
-        recreate();
+        finish();
+        overridePendingTransition(0, 0);
+        startActivity(getIntent());
+        overridePendingTransition(0, 0);
+        Toast.makeText(MainActivity.this, getResources().getConfiguration().locale.toString(), Toast.LENGTH_SHORT).show();
     }
-
 
 
 }

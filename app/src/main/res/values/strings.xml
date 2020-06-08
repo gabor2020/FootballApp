@@ -52,4 +52,11 @@
     <string name="menu_title_top">Top 5</string>
     <string name="menu_title_media">Media</string>
     <string name="menu_title_quiz">Quiz</string>
+    <string name="image_content_description_fullscreen">Fullscreen Bild</string>
+    <string name="image_content_description_gallery1" translatable="false">Messi</string>
+    <string name="image_content_description_gallery2" translatable="false">Nou Camp</string>
+    <string name="image_content_description_gallery3">Stadion</string>
+    <string name="image_content_description_gallery4">Spiel Brasilien</string>
+    <string name="image_content_description_gallery5">Groupama Arena</string>
+    <string name="image_content_description_gallery6">Ferencvaros Fans</string>
 </resources>

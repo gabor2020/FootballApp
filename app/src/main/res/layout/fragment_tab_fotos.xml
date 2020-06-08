@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -26,10 +25,13 @@
             android:layout_columnSpan="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/image_content_description_gallery1"
+            android:onClick="setPic1"
             android:scaleType="centerCrop"
             android:src="@drawable/gallery1" />
 
         <ImageView
+            android:id="@+id/image2_fotos"
             android:layout_width="0dp"
             android:layout_height="300dp"
             android:layout_row="0"
@@ -38,10 +40,13 @@
             android:layout_columnSpan="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/image_content_description_gallery2"
+            android:onClick="setPic2"
             android:scaleType="centerCrop"
             android:src="@drawable/gallery2" />
 
         <ImageView
+            android:id="@+id/image3_fotos"
             android:layout_width="0dp"
             android:layout_height="300dp"
             android:layout_row="1"
@@ -50,10 +55,13 @@
             android:layout_columnSpan="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/image_content_description_gallery3"
+            android:onClick="setPic3"
             android:scaleType="centerCrop"
             android:src="@drawable/gallery3" />
 
         <ImageView
+            android:id="@+id/image4_fotos"
             android:layout_width="0dp"
             android:layout_height="300dp"
             android:layout_row="1"
@@ -62,10 +70,13 @@
             android:layout_columnSpan="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/image_content_description_gallery4"
+            android:onClick="setPic4"
             android:scaleType="centerCrop"
             android:src="@drawable/gallery4" />
 
         <ImageView
+            android:id="@+id/image5_fotos"
             android:layout_width="0dp"
             android:layout_height="300dp"
             android:layout_row="2"
@@ -74,10 +85,13 @@
             android:layout_columnSpan="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/image_content_description_gallery5"
+            android:onClick="setPic5"
             android:scaleType="centerCrop"
-            android:src="@drawable/match1" />
+            android:src="@drawable/gallery5" />
 
         <ImageView
+            android:id="@+id/image6_fotos"
             android:layout_width="0dp"
             android:layout_height="300dp"
             android:layout_row="2"
@@ -86,10 +100,12 @@
             android:layout_columnSpan="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/image_content_description_gallery6"
+            android:onClick="setPic6"
             android:scaleType="centerCrop"
-            android:src="@drawable/match2" />
-
+            android:src="@drawable/gallery6" />
 
     </GridLayout>
 
 </ScrollView>
+

@@ -43,4 +43,9 @@
         <item>Cristiano Ronaldo</item>
         <item>Lionel Messi</item>
     </string-array>
+    <string name="image_content_description_fullscreen">Fullscreen Bild</string>
+    <string name="image_content_description_gallery3">Stadion</string>
+    <string name="image_content_description_gallery4">Spiel Brasilien</string>
+    <string name="image_content_description_gallery5">Groupama Arena</string>
+    <string name="image_content_description_gallery6">Ferencvaros Fans</string>
 </resources>

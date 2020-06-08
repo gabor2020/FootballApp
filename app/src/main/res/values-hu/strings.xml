@@ -35,4 +35,17 @@
     <string name="era3_description">Az első profi bajnokságok a két világháború között indultak. Ausztria volt az első ország, ahol a bajnokságban fizetett játékosok léptek pályára 1924-ben. Három évvel később az Osztrák Labdarúgó Szövetség indította el a híres Középeurópa-Kupát, az első jelentős nemzetközi kupaversengést klubcsapatok számára. A KK számít a mai Bajnokok Ligája előfutárának.</string>
     <string name="era5_description">Köszönhetően a tömegmédiának és a televíziós technika fejlődésének a labdarúgás egyre népszerűbb lett, immár globális érdeklődést kiváltva. A 2002-es Világbajnokság selejtezőire 198 nemzeti válogatott nevezett. Ma a FIFA 208 tagjával több országot képvisel, mint az Egyesült Nemzetek Szervezete (192).</string>
     <string name="era6_description">Napjainkban a legjobb játékosok népszerűsége nagyobb, mint valaha. Az olyan futballisták, mint Messi, Neymar vagy Ronaldo 100 millió fölötti követővel rendelkeznek a közösségi médiában. Hatásuk és befolyásuk a labdarúgásra óriási.</string>
+    <string-array name="top_players">
+    <item>Játékos</item>
+    <item>Puskás Ferenc</item>
+    <item>Pelé</item>
+    <item>Diego Maradona</item>
+    <item>Cristiano Ronaldo</item>
+    <item>Lionel Messi</item>
+    </string-array>
+    <string name="image_content_description_fullscreen">Teljes képernyős kép</string>
+    <string name="image_content_description_gallery3">Stadion</string>
+    <string name="image_content_description_gallery4">Brazil meccs</string>
+    <string name="image_content_description_gallery5">Groupama Aréna</string>
+    <string name="image_content_description_gallery6">Ferencváros szurkolók</string>
 </resources>
