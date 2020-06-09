@@ -57,11 +57,11 @@ public class FullscreenActivity extends AppCompatActivity {
         @Override
         public void run() {
             // Delayed display of UI elements
-            ActionBar actionBar = getSupportActionBar();
+            /*ActionBar actionBar = getSupportActionBar();
             if (actionBar != null) {
                 actionBar.show();
-            }
-            mControlsView.setVisibility(View.VISIBLE);
+            }*/
+            /*mControlsView.setVisibility(View.VISIBLE);*/
         }
     };
     private boolean mVisible;
@@ -98,7 +98,7 @@ public class FullscreenActivity extends AppCompatActivity {
         picImageView.setImageResource(imageShown);
 
         mVisible = true;
-        mControlsView = findViewById(R.id.fullscreen_content_controls);
+        /*mControlsView = findViewById(R.id.fullscreen_content_controls);*/
         mContentView = findViewById(R.id.fullscreen_content);
 
 
@@ -140,7 +140,7 @@ public class FullscreenActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.hide();
         }
-        mControlsView.setVisibility(View.GONE);
+        /*mControlsView.setVisibility(View.GONE);*/
         mVisible = false;
 
         // Schedule a runnable to remove the status and navigation bar after a delay
