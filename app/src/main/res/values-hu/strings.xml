@@ -48,4 +48,7 @@
     <string name="image_content_description_gallery4">Brazil meccs</string>
     <string name="image_content_description_gallery5">Groupama Aréna</string>
     <string name="image_content_description_gallery6">Ferencváros szurkolók</string>
+    <string name="title_quiz">KVÍZ</string>
+    <string name="button_start_quiz">Kvíz indítása</string>
+    <string name="button_text_answer">Elküld</string>
 </resources>

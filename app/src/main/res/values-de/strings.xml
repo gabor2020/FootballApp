@@ -48,4 +48,7 @@
     <string name="image_content_description_gallery4">Spiel Brasilien</string>
     <string name="image_content_description_gallery5">Groupama Arena</string>
     <string name="image_content_description_gallery6">Ferencvaros Fans</string>
+    <string name="title_quiz">QUIZ</string>
+    <string name="button_start_quiz">QUIZ starten</string>
+    <string name="button_text_answer">Antworten</string>
 </resources>
