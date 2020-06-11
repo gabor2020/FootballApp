@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            outState.putString("my_text", getResources().getConfiguration().getLocales().get(0).getLanguage());
+            outState.putString("my_text", Locale.getDefault().getLanguage());
         }else outState.putString("my_text", getResources().getConfiguration().locale.getLanguage());
         super.onSaveInstanceState(outState);
     }

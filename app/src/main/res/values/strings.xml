@@ -61,5 +61,21 @@
     <string name="image_content_description_gallery6">Ferencvaros Fans</string>
     <string name="title_quiz">QUIZ</string>
     <string name="button_start_quiz">Quiz starten</string>
-    <string name="button_text_answer">Antworten</string>
+    <string name="button_text_new_game">Neues Spiel</string>
+    <string name="text_result_bad">Versuchen Sie erneut!</string>
+    <string name="text_result_ok">Gutes Ergebnis!</string>
+    <string name="text_result_good">Sehr gutes Ergebnis!</string>
+    <string name="text_result_perfect">Perfektes Ergebnis!</string>
+    <string name="description_image_result">Ergebnis Bild</string>
+    <string name="text_score">Punkte:</string>
+    <string name="text_score_zero">Punkte: 0</string>
+    <string name="button_text_next">Nächste Frage</string>
+    <string name="button_text_result">Zum Ergebnis</string>
+    <string name="select_answer">"Bitte wählen Sie!"</string>
+    <string name="button_text_confirm">Bestätigen</string>
+    <string name="text_question_nr">Frage: </string>
+    <string name="divider" translatable="false">/</string>
+    <string name="text_answer1_correct">Antwort 1 ist richtig</string>
+    <string name="text_answer2_correct">Antwort 2 ist richtig</string>
+    <string name="text_answer3_correct">Antwort 3 ist richtig</string>
 </resources>

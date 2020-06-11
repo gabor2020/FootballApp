@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import at.home.gabor.footballapp.QuizContract.*;
 
@@ -12,6 +13,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class QuizDbHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "FootballApp.db";
@@ -37,7 +39,15 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 QuestionsTable.COLUMN_ANSWER_NR + " INTEGER" + ")";
 
         db.execSQL(SQL_CREATE_QUESTIONS_TABLE);
-        fillQuestionsTable();
+        String CurrentLang = Locale.getDefault().getLanguage();
+        if (CurrentLang.equals("hu")){
+        fillQuestionsTableHun();
+        }else if (CurrentLang.equals("en")){
+            fillQuestionsTableEng();
+        }else {
+            fillQuestionsTable();
+        }
+
 
     }
 
@@ -48,6 +58,32 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable(){
+        Question q1 = new Question("A ist richtig", "A", "B", "C", 1);
+        addQuestion(q1);
+        Question q2 = new Question("B ist richtig", "A", "B", "C", 2);
+        addQuestion(q2);
+        Question q3 = new Question("C ist richtig", "A", "B", "C", 3);
+        addQuestion(q3);
+        Question q4 = new Question("A ist richtig wieder", "A", "B", "C", 1);
+        addQuestion(q4);
+        Question q5 = new Question("B ist richtig wieder", "A", "B", "C", 2);
+        addQuestion(q5);
+    }
+
+    private void fillQuestionsTableHun(){
+        Question q1 = new Question("A a helyes", "A", "B", "C", 1);
+        addQuestion(q1);
+        Question q2 = new Question("B a helyes", "A", "B", "C", 2);
+        addQuestion(q2);
+        Question q3 = new Question("C a helyes", "A", "B", "C", 3);
+        addQuestion(q3);
+        Question q4 = new Question("A a helyes megint", "A", "B", "C", 1);
+        addQuestion(q4);
+        Question q5 = new Question("B a helyes megint", "A", "B", "C", 2);
+        addQuestion(q5);
+    }
+
+    private void fillQuestionsTableEng(){
         Question q1 = new Question("A is correct", "A", "B", "C", 1);
         addQuestion(q1);
         Question q2 = new Question("B is correct", "A", "B", "C", 2);

@@ -50,5 +50,20 @@
     <string name="image_content_description_gallery6">Ferencváros szurkolók</string>
     <string name="title_quiz">KVÍZ</string>
     <string name="button_start_quiz">Kvíz indítása</string>
-    <string name="button_text_answer">Elküld</string>
+    <string name="button_text_new_game">Új játék</string>
+    <string name="text_result_bad">Próbálkozzon újra!</string>
+    <string name="text_result_ok">Jó eredmény!</string>
+    <string name="text_result_good">Nagyon jó eredmény!</string>
+    <string name="text_result_perfect">Tökéletes eredmény!</string>
+    <string name="description_image_result">Eredmény ikon</string>
+    <string name="text_score">"Pontszám: "</string>
+    <string name="text_score_zero">Pontszám: 0</string>
+    <string name="button_text_next">Következő kérdés</string>
+    <string name="button_text_result">Eredmény</string>
+    <string name="select_answer">Kérjük válasszon!</string>
+    <string name="button_text_confirm">Kiválaszt</string>
+    <string name="text_question_nr">"Kérdés: "</string>
+    <string name="text_answer1_correct">A helyes válasz az 1-es</string>
+    <string name="text_answer2_correct">A helyes válasz a 2-es</string>
+    <string name="text_answer3_correct">A helyes válasz a 3-as</string>
 </resources>

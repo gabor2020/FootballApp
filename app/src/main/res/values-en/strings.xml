@@ -50,5 +50,20 @@
     <string name="image_content_description_gallery6">Ferencvaros fans</string>
     <string name="title_quiz">QUIZ</string>
     <string name="button_start_quiz">Start Quiz</string>
-    <string name="button_text_answer">Send</string>
+    <string name="button_text_new_game">New game</string>
+    <string name="text_result_bad">Try again</string>
+    <string name="text_result_ok">Good result</string>
+    <string name="text_result_good">Very good result</string>
+    <string name="text_result_perfect">Perfect result</string>
+    <string name="description_image_result">Result image</string>
+    <string name="text_score">"Score: "</string>
+    <string name="text_score_zero">Score: 0</string>
+    <string name="button_text_next">Next</string>
+    <string name="button_text_result">Finish</string>
+    <string name="select_answer">Please select an answer</string>
+    <string name="button_text_confirm">Confirm</string>
+    <string name="text_question_nr">"Question: "</string>
+    <string name="text_answer1_correct">Answer 1 is correct</string>
+    <string name="text_answer2_correct">Answer 2 is correct</string>
+    <string name="text_answer3_correct">Answer 3 is correct</string>
 </resources>

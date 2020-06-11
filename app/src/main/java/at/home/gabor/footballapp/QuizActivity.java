@@ -6,9 +6,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Locale;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -16,6 +19,9 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        String CurrentLang = Locale.getDefault().getLanguage();
+        Toast.makeText(QuizActivity.this, CurrentLang, Toast.LENGTH_SHORT).show();
 
     }
     @Override
