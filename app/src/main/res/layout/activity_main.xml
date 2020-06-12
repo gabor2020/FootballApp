@@ -49,7 +49,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/text_decription_main"
+                android:text="@string/text_description_main"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 

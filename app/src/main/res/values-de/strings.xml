@@ -14,7 +14,6 @@
     <string name="tab_text_1">Fotos</string>
     <string name="tab_text_2">Videos</string>
     <string name="text_title_main">Fußball App</string>
-    <string name="text_decription_main">Fußball, der beliebteste Sport der Welt entstand in der zweiten Hälfte des 19. Jahrhunderts in Großbritannien und breitete sich ab den 1880er und 1890er Jahren in Kontinentaleuropa und anderen Kontinenten aus.</string>
     <string name="image_main">Startbild</string>
     <string name="title_era">ZEITPERIODE</string>
     <string name="era1_title">Der Anfang</string>
@@ -66,4 +65,7 @@
     <string name="text_answer1_correct">Antwort 1 ist richtig</string>
     <string name="text_answer2_correct">Antwort 2 ist richtig</string>
     <string name="text_answer3_correct">Antwort 3 ist richtig</string>
+    <string name="text_description_main">Fußball, der beliebteste Sport der Welt entstand in der zweiten Hälfte des 19. Jahrhunderts in Großbritannien und breitete sich ab den 1880er und 1890er Jahren in Kontinentaleuropa und anderen Kontinenten aus.</string>
+    <string name="vid_desc4">WM 2018</string>
+    <string name="image_content_description_gallery7">CL Spiel</string>
 </resources>

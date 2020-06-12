@@ -28,7 +28,6 @@
     <string name="description_maradona">Diego Armando Maradonát a futballtörténet egyik legjobb játékosának tartják. Csapatkapitányként az argentin válogatottat 1986-ban vb-győzelemig vezette. Összesen négy világbajnokságon vett részt, 91 válogatott mérkőzésén 31 gólt szerzett.</string>
     <string name="description_ronaldo">A Sporting Lisszabonban nevelkedett Cristiano Ronaldo 18 évesen igazolt a Manchester United csapatához, ahol hamarosan világklasszis játékossá fejlődött. Ronaldo az egyetlen labdarúgó, aki Angliában, Spanyolországban és Olaszországban is bajnok lett és az év játékosának is megválasztották.</string>
     <string name="description_messi">"A sokak által a valaha volt legjobb labdarúgónak tartott Lionel Messi nyolc alkalommal nyerte el az Aranylabdát. Az FC Barcelonával többek között négy Bajnokok Ligája, tíz spanyol bajnoki és hat Spanyol Kupagyőztes-címet szerzett. "</string>
-    <string name="text_decription_main">A labdarúgás, a világ legnépszerűbb sportja a 19. század második felében született meg Nagy-Britanniában és terjedt el az 1880-as és 1890-es években Európában és a világ más részein.</string>
     <string name="era1_description">Az angol magániskolákban és egyetemeken a futball egyre népszerűbb testgyakorlás lett. 1857-ben megalakult a világ első futballklubja, az FC Sheffield. Anglia számít a modern futball szülőhelyének, mivel itt alakult meg 1863-ban Londonban az angol Labdarúgó Szövetség (FA), amely elsőként dolgozta ki a labdarúgás átfogó szabályrendszerét.</string>
     <string name="era2_description">A kontinensen először Svájcban vetette meg a lábát a futball. Innen terjedt szét a labdarúgás a környező országokba: a svájciak által alapított Stade Helvétique Marseille 1909-ban francia bajnok lett, az FC Barcelona pedig a svájci Joan Gamper ötletéből született meg. Mivel a nemzeties irányultságú milánói Cricket and Football Club nem fogadott be külföldieket, svájci és olasz játékosok megalapították az FC Internazionalét.</string>
     <string name="era4_description">Az Európai Labdarúgó Szövetséget 1954-ben a svájci Bázelban alapították. Az UEFA már az 1955/56-os szezonban megrendezte az első Bajnokcsapatok Európakupáját. 1960-ban indult útjára az Európai Nemzetek Kupája, amely nyolc évvel később vette fel a labdarúgó-Európa-bajnokság nevet.</string>
@@ -66,4 +65,7 @@
     <string name="text_answer1_correct">A helyes válasz az 1-es</string>
     <string name="text_answer2_correct">A helyes válasz a 2-es</string>
     <string name="text_answer3_correct">A helyes válasz a 3-as</string>
+    <string name="text_description_main">A labdarúgás, a világ legnépszerűbb sportja a 19. század második felében született meg Nagy-Britanniában és terjedt el az 1880-as és 1890-es években Európában és a világ más részein.</string>
+    <string name="vid_desc4">2018-as Vb</string>
+    <string name="image_content_description_gallery7">BL meccs</string>
 </resources>

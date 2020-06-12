@@ -105,6 +105,36 @@
             android:scaleType="centerCrop"
             android:src="@drawable/gallery6" />
 
+        <ImageView
+            android:id="@+id/image7_fotos"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_row="3"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/image_content_description_gallery7"
+            android:onClick="setPic7"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gallery7" />
+
+        <ImageView
+            android:id="@+id/image8_fotos"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_row="3"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:contentDescription="@string/image_content_description_gallery3"
+            android:onClick="setPic8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gallery8" />
+
     </GridLayout>
 
 </ScrollView>

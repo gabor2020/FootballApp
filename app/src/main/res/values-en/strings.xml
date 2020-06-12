@@ -24,7 +24,6 @@
     <string name="description_maradona">Diega Armando Maradona is considered as one of the best football players in history. He led his Argentinian national team as captain to win the 1986 World Cup. Altogether he participated on four World Cups and scored 34 goals in 91 games.</string>
     <string name="description_ronaldo">Trained by the youth academy of Sportind Lisboa, Cristiano Ronaldo transferred at the age of 18 to Manchester United where he became a world class footballer. He is the only player ever to win the English, Spanish and Italian champions title as well as named Player of the year in all three countries.</string>
     <string name="description_messi">Consider by many experts the greatest player of all times, Lionel Messi is with six wins the record title holder of France Football\'s prestigious Ballon D\'Or award. With FC Barcelona he won among others four Champions League, ten Spanish League, and six Spanish Cup titles.</string>
-    <string name="text_decription_main">Football, the most popular sport of the world was created in Britain in the second half of the 19. century and spread across continental Europe and overseas in the 1880\'s and 1890\'s.</string>
     <string name="era1_description">The sport became ever more popular in the private schools and universities of England. In 1857 the first Club for Association Football, FC Sheffield was created. Because of the founding if Football Association (FA) in London in 1863 and the creation of the first football rulebook there, England is considered the birthplace of football.</string>
     <string name="era2_description">On continental Europe football set foot first in Switzerland. From there it was exported to the neighbouring countries: In 1909 the swiss-rooted club Stade Helvétique Marseille won the French championship, the FC Barcelona was founded by swissman Joan Gamper. As the nationalistically oriented Milan Cricket and Football Club didn\'t accept foreigners, swiss and Italian players founded the new club Inter Milan.</string>
     <string name="era3_description">The first professional leagues started in the interwar period. With the introduction of a Profi-League in 1924 Austria became the first nation on continental Europe to have an event for paid players. Three years later the Austrian Football Association initiated the first notable international event for club teams in form of the Central European Cup. This served as a predecessor of today\'s major European Cups like the UEFA Champions League.</string>
@@ -66,4 +65,7 @@
     <string name="text_answer1_correct">Answer 1 is correct</string>
     <string name="text_answer2_correct">Answer 2 is correct</string>
     <string name="text_answer3_correct">Answer 3 is correct</string>
+    <string name="text_description_main">Football, the most popular sport of the world was created in Britain in the second half of the 19. century and spread across continental Europe and overseas in the 1880\'s and 1890\'s.</string>
+    <string name="vid_desc4">World Cup 2018</string>
+    <string name="image_content_description_gallery7">CL Match</string>
 </resources>

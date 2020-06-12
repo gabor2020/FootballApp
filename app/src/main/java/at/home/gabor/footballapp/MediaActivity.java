@@ -124,6 +124,16 @@ public class MediaActivity extends AppCompatActivity {
         startPicActivity(imageSource);
     }
 
+    public void setPic7(View view) {
+        imageSource = R.drawable.gallery7;
+        startPicActivity(imageSource);
+    }
+
+    public void setPic8(View view) {
+        imageSource = R.drawable.gallery8;
+        startPicActivity(imageSource);
+    }
+
     public void startPicActivity(int imageSource) {
         Intent intent = new Intent(this, FullscreenActivity.class);
         intent.putExtra("ImageToShow", imageSource);
