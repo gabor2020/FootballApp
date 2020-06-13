@@ -1,10 +1,7 @@
 package at.home.gabor.footballapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -14,6 +11,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Collections;
 import java.util.List;
@@ -68,7 +67,16 @@ public class QuizStartedActivity extends AppCompatActivity {
         textColorDefaultCd = textViewCountDown.getTextColors();
 
         QuizDbHelper dbHelper = new QuizDbHelper(this);
-        questionList = dbHelper.getAllQuestions();
+
+        String currentLocale = getResources().getConfiguration().locale.toString();
+
+        if (currentLocale.equals("hu")){
+            questionList = dbHelper.getAllQuestionsHun();
+        } else if (currentLocale.equals("en")){
+            questionList = dbHelper.getAllQuestionsEng();
+        } else {
+            questionList = dbHelper.getAllQuestions();
+        }
         questionCountTotal = questionList.size();
         Collections.shuffle(questionList);
 
@@ -207,4 +215,5 @@ public class QuizStartedActivity extends AppCompatActivity {
             countDownTimer.cancel();
         }
     }
+
 }

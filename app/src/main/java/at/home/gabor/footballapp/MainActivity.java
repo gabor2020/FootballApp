@@ -1,40 +1,31 @@
 package at.home.gabor.footballapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            outState.putString("my_text", Locale.getDefault().getLanguage());
-        }else outState.putString("my_text", getResources().getConfiguration().locale.getLanguage());
-        super.onSaveInstanceState(outState);
-    }
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String KEY_LANGUAGE = "keyLanguage";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadPrefs();
         setContentView(R.layout.activity_main);
-        if (savedInstanceState != null){
-            setAppLocale(Objects.requireNonNull(savedInstanceState.getString("my_text")));}
     }
 
 
@@ -103,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         setAppLocale(localeCode);
     }
 
-
     public void setEnglish() {
         localeCode = "en";
         setAppLocale(localeCode);
@@ -114,8 +104,12 @@ public class MainActivity extends AppCompatActivity {
         setAppLocale(localeCode);
     }
 
-
     public void setAppLocale(String localeCode) {
+        SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(KEY_LANGUAGE, localeCode);
+        editor.apply();
+
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
         Configuration conf = res.getConfiguration();
@@ -125,7 +119,16 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition(0, 0);
         startActivity(getIntent());
         overridePendingTransition(0, 0);
-        Toast.makeText(MainActivity.this, getResources().getConfiguration().locale.toString(), Toast.LENGTH_SHORT).show();
+    }
+
+    public void loadPrefs (){
+        SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        localeCode = prefs.getString(KEY_LANGUAGE, "de");
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.setLocale(new Locale(localeCode.toLowerCase()));
+        res.updateConfiguration(conf, dm);
     }
 
 

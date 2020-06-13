@@ -4,8 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,11 +20,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class TopActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadPrefs();
         setContentView(R.layout.activity_top);
 
         Spinner spinner = findViewById(R.id.spinner1);
@@ -131,5 +138,16 @@ public class TopActivity extends AppCompatActivity {
         return true;
     }
 
+    String localeCode;
+
+    public void loadPrefs (){
+        SharedPreferences prefs = getSharedPreferences(MainActivity.SHARED_PREFS, MODE_PRIVATE);
+        localeCode = prefs.getString(MainActivity.KEY_LANGUAGE, "de");
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.setLocale(new Locale(localeCode.toLowerCase()));
+        res.updateConfiguration(conf, dm);
+    }
 
 }

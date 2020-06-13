@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import at.home.gabor.footballapp.QuizContract.QuestionsTable;
 import at.home.gabor.footballapp.QuizContract.QuestionsTableEng;
@@ -75,7 +74,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
 
-    private void fillQuestionsTable(){
+    private void fillQuestionsTable() {
         Question q1 = new Question("A ist richtig", "A", "B", "C", 1);
         addQuestion(q1);
         Question q2 = new Question("B ist richtig", "A", "B", "C", 2);
@@ -88,7 +87,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q5);
     }
 
-    private void fillQuestionsTableHun(){
+    private void fillQuestionsTableHun() {
         Question q1 = new Question("A a helyes", "A", "B", "C", 1);
         addQuestionHun(q1);
         Question q2 = new Question("B a helyes", "A", "B", "C", 2);
@@ -101,7 +100,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestionHun(q5);
     }
 
-    private void fillQuestionsTableEng(){
+    private void fillQuestionsTableEng() {
         Question q1 = new Question("A is correct", "A", "B", "C", 1);
         addQuestionEng(q1);
         Question q2 = new Question("B is correct", "A", "B", "C", 2);
@@ -114,7 +113,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestionEng(q5);
     }
 
-    private void addQuestion(Question question){
+    private void addQuestion(Question question) {
         ContentValues cv = new ContentValues();
         cv.put(QuestionsTable.COLUMN_QUESTION, question.getQuestion());
         cv.put(QuestionsTable.COLUMN_OPTION1, question.getOption1());
@@ -124,7 +123,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.insert(QuestionsTable.TABLE_NAME, null, cv);
     }
 
-    private void addQuestionHun(Question question){
+    private void addQuestionHun(Question question) {
         ContentValues cv = new ContentValues();
         cv.put(QuestionsTableHun.COLUMN_QUESTION, question.getQuestion());
         cv.put(QuestionsTableHun.COLUMN_OPTION1, question.getOption1());
@@ -134,7 +133,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.insert(QuestionsTableHun.TABLE_NAME, null, cv);
     }
 
-    private void addQuestionEng(Question question){
+    private void addQuestionEng(Question question) {
         ContentValues cv = new ContentValues();
         cv.put(QuestionsTableEng.COLUMN_QUESTION, question.getQuestion());
         cv.put(QuestionsTableEng.COLUMN_OPTION1, question.getOption1());
@@ -144,63 +143,80 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.insert(QuestionsTableEng.TABLE_NAME, null, cv);
     }
 
-    List<Question> getAllQuestions(){
+
+    List<Question> getAllQuestionsHun() {
         List<Question> questionList = new ArrayList<>();
 
-        String CurrentLang = Locale.getDefault().getLanguage();
-        if (CurrentLang.equals("hu")){
-            db = getReadableDatabase();
-            Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTableHun.TABLE_NAME, null);
 
-            if (c.moveToFirst()){
-                do {
-                    Question question = new Question();
-                    question.setQuestion(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_QUESTION)));
-                    question.setOption1(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION1)));
-                    question.setOption2(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION2)));
-                    question.setOption3(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION3)));
-                    question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTableHun.COLUMN_ANSWER_NR)));
-                    questionList.add(question);
-                } while (c.moveToNext());
-            }
+        db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTableHun.TABLE_NAME, null);
 
-            c.close();
-        }else if (CurrentLang.equals("en")){
-            db = getReadableDatabase();
-            Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTableEng.TABLE_NAME, null);
-
-            if (c.moveToFirst()){
-                do {
-                    Question question = new Question();
-                    question.setQuestion(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_QUESTION)));
-                    question.setOption1(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION1)));
-                    question.setOption2(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION2)));
-                    question.setOption3(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION3)));
-                    question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTableEng.COLUMN_ANSWER_NR)));
-                    questionList.add(question);
-                } while (c.moveToNext());
-            }
-
-            c.close();
-        }else {
-            db = getReadableDatabase();
-            Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTable.TABLE_NAME, null);
-
-            if (c.moveToFirst()){
-                do {
-                    Question question = new Question();
-                    question.setQuestion(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_QUESTION)));
-                    question.setOption1(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION1)));
-                    question.setOption2(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION2)));
-                    question.setOption3(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION3)));
-                    question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTable.COLUMN_ANSWER_NR)));
-                    questionList.add(question);
-                } while (c.moveToNext());
-            }
-
-            c.close();
+        if (c.moveToFirst()) {
+            do {
+                Question question = new Question();
+                question.setQuestion(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_QUESTION)));
+                question.setOption1(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION1)));
+                question.setOption2(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION2)));
+                question.setOption3(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION3)));
+                question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTableHun.COLUMN_ANSWER_NR)));
+                questionList.add(question);
+            } while (c.moveToNext());
         }
+
+        c.close();
+
 
         return questionList;
     }
+
+    List<Question> getAllQuestionsEng() {
+        List<Question> questionList = new ArrayList<>();
+
+
+        db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTableEng.TABLE_NAME, null);
+
+        if (c.moveToFirst()) {
+            do {
+                Question question = new Question();
+                question.setQuestion(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_QUESTION)));
+                question.setOption1(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION1)));
+                question.setOption2(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION2)));
+                question.setOption3(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION3)));
+                question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTableEng.COLUMN_ANSWER_NR)));
+                questionList.add(question);
+            } while (c.moveToNext());
+        }
+
+        c.close();
+
+
+        return questionList;
+    }
+
+    List<Question> getAllQuestions() {
+        List<Question> questionList = new ArrayList<>();
+
+
+        db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTable.TABLE_NAME, null);
+
+        if (c.moveToFirst()) {
+            do {
+                Question question = new Question();
+                question.setQuestion(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_QUESTION)));
+                question.setOption1(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION1)));
+                question.setOption2(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION2)));
+                question.setOption3(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION3)));
+                question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTable.COLUMN_ANSWER_NR)));
+                questionList.add(question);
+            } while (c.moveToNext());
+        }
+
+        c.close();
+
+
+        return questionList;
+    }
+
 }

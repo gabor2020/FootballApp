@@ -1,10 +1,14 @@
 package at.home.gabor.footballapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -18,6 +22,8 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.Locale;
+
 public class MediaActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -26,6 +32,7 @@ public class MediaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadPrefs();
         setContentView(R.layout.activity_media);
 
         TabLayout tabLayout = findViewById(R.id.tabLayoutMedia);
@@ -140,6 +147,16 @@ public class MediaActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    String localeCode;
 
+    public void loadPrefs (){
+        SharedPreferences prefs = getSharedPreferences(MainActivity.SHARED_PREFS, MODE_PRIVATE);
+        localeCode = prefs.getString(MainActivity.KEY_LANGUAGE, "de");
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.setLocale(new Locale(localeCode.toLowerCase()));
+        res.updateConfiguration(conf, dm);
+    }
 
 }
