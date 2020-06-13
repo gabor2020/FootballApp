@@ -7,6 +7,7 @@ import android.content.res.ColorStateList;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -16,8 +17,10 @@ import android.widget.Toast;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 public class QuizStartedActivity extends AppCompatActivity {
+    private static final long COUNTDOWN_IN_MILLIS = 30000;
 
 
     private TextView textViewQuestion;
@@ -31,6 +34,12 @@ public class QuizStartedActivity extends AppCompatActivity {
     private Button buttonConfirmNext;
 
     private ColorStateList textColorDefaultRb;
+    private ColorStateList textColorDefaultCd;
+
+    private CountDownTimer countDownTimer;
+    private long timeLeftInMillis;
+
+
     private int questionCounter;
     public int questionCountTotal;
     private Question currentQuestion;
@@ -56,6 +65,7 @@ public class QuizStartedActivity extends AppCompatActivity {
         buttonConfirmNext = findViewById(R.id.button_confirm_next);
 
         textColorDefaultRb = rb1.getTextColors();
+        textColorDefaultCd = textViewCountDown.getTextColors();
 
         QuizDbHelper dbHelper = new QuizDbHelper(this);
         questionList = dbHelper.getAllQuestions();
@@ -80,13 +90,13 @@ public class QuizStartedActivity extends AppCompatActivity {
         });
     }
 
-    private void showNextQuestion(){
+    private void showNextQuestion() {
         rb1.setTextColor(textColorDefaultRb);
         rb2.setTextColor(textColorDefaultRb);
         rb3.setTextColor(textColorDefaultRb);
         rbGroup.clearCheck();
 
-        if (questionCounter < questionCountTotal){
+        if (questionCounter < questionCountTotal) {
             currentQuestion = questionList.get(questionCounter);
 
             textViewQuestion.setText(currentQuestion.getQuestion());
@@ -98,13 +108,49 @@ public class QuizStartedActivity extends AppCompatActivity {
             textViewQuestionCount.setText(getString(R.string.text_question_nr) + questionCounter + getString(R.string.divider) + questionCountTotal);
             answered = false;
             buttonConfirmNext.setText(R.string.button_text_confirm);
+
+            timeLeftInMillis = COUNTDOWN_IN_MILLIS;
+            startCountDown();
         } else {
             finishQuiz();
         }
     }
 
-    private void checkAnswer(){
+    private void startCountDown() {
+        countDownTimer = new CountDownTimer(timeLeftInMillis, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeftInMillis = millisUntilFinished;
+                updateCountDownText();
+            }
+
+            @Override
+            public void onFinish() {
+                timeLeftInMillis = 0;
+                updateCountDownText();
+                checkAnswer();
+            }
+        }.start();
+    }
+
+    private void updateCountDownText(){
+        int minutes = (int) ((timeLeftInMillis / 1000) / 60);
+        int seconds = (int) ((timeLeftInMillis / 1000) % 60);
+
+        String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
+        textViewCountDown.setText(timeFormatted);
+
+        if (timeLeftInMillis < 10000){
+            textViewCountDown.setTextColor(Color.RED);
+        } else {
+            textViewCountDown.setTextColor(textColorDefaultCd);
+        }
+    }
+
+    private void checkAnswer() {
         answered = true;
+
+        countDownTimer.cancel();
 
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
         int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
@@ -117,12 +163,12 @@ public class QuizStartedActivity extends AppCompatActivity {
         showSolution();
     }
 
-    private void showSolution(){
+    private void showSolution() {
         rb1.setTextColor(Color.RED);
         rb2.setTextColor(Color.RED);
         rb3.setTextColor(Color.RED);
 
-        switch (currentQuestion.getAnswerNr()){
+        switch (currentQuestion.getAnswerNr()) {
             case 1:
                 rb1.setTextColor(getResources().getColor(R.color.colorAccent));
                 textViewQuestion.setText(R.string.text_answer1_correct);
@@ -144,7 +190,7 @@ public class QuizStartedActivity extends AppCompatActivity {
         }
     }
 
-    private void finishQuiz(){
+    private void finishQuiz() {
         startResultActivity(score);
     }
 
@@ -152,5 +198,13 @@ public class QuizStartedActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra("Result", score);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (countDownTimer != null){
+            countDownTimer.cancel();
+        }
     }
 }
