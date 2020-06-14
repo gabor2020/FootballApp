@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import at.home.gabor.footballapp.QuizContract.QuestionsTable;
 import at.home.gabor.footballapp.QuizContract.QuestionsTableEng;
@@ -116,19 +115,19 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         Question q5 = new Question("Ki lőtte a Vb-történelem leggyorsabb gólját?", "Clint Dempsey", "Hakan Şükür", "Michael Ballack", "Ronaldinho",2);
         addQuestionHun(q5);
         Question q6 = new Question("Ki lőtte a brazilok egyetlen gólját Németországnak a 2014-es 7:1-re elvesztett meccsen?", "Neymar", "Hulk", "David Luiz", "Oscar",4);
-        addQuestionEng(q6);
+        addQuestionHun(q6);
         Question q7 = new Question("Az 1954-es év emlékezetes eseménye úgy is ismert a futballtörténelemben, mint...", "A bécsi botrány", "A müncheni győzelem", "A londoni Wembley-gól", "A berni csoda",4);
-        addQuestionEng(q7);
+        addQuestionHun(q7);
         Question q8 = new Question("Ki volt az 1954-es Világbajnokság gólkirálya?", "Kocsis Sándor", "Helmut Rahn", "Max Morlock", "Puskás Ferenc",1);
-        addQuestionEng(q8);
+        addQuestionHun(q8);
         Question q9 = new Question("Melyik ország nyerte a legtöbb világbajnoki címet?", "Németország", "Olaszország", "Brazília", "Argentína",3);
-        addQuestionEng(q9);
+        addQuestionHun(q9);
         Question q10 = new Question("Melyik ország nyerte a 2004-es Európa-bajnokságot?", "Németország", "Franciaország", "Görögország", "Spanyolország",3);
-        addQuestionEng(q10);
+        addQuestionHun(q10);
         Question q11 = new Question("Ki lőtte a 2012-es Európa-bajnokság utolsó gólját?", "Mario Gomez", "Juan Mata", "Andres Iniesta", "Rudi Völler",2);
-        addQuestionEng(q11);
+        addQuestionHun(q11);
         Question q12 = new Question("Milyen mérkőzést játszottak az 1938-as Világbajnokság döntőjében?", "Ausztria-Franciaország", "Magyarország-Olaszország", "Svédország-Svájc", "Olaszország-Brazília",2);
-        addQuestionEng(q12);
+        addQuestionHun(q12);
     }
 
     private void fillQuestionsTableEng() {

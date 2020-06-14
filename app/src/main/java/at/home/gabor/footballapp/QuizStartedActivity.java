@@ -78,7 +78,7 @@ public class QuizStartedActivity extends AppCompatActivity {
 
         textColorDefaultRb = rb1.getTextColors();
         textColorDefaultCd = textViewCountDown.getTextColors();
-        questionCountTotal = 5;
+
 
         if (savedInstanceState == null) {
             QuizDbHelper dbHelper = new QuizDbHelper(this);
@@ -90,11 +90,13 @@ public class QuizStartedActivity extends AppCompatActivity {
             } else {
                 questionList = dbHelper.getAllQuestions();
             }
+            questionCountTotal = 5;
             Collections.shuffle(questionList);
 
             showNextQuestion();
         } else {
             questionList = savedInstanceState.getParcelableArrayList(KEY_QUESTION_LIST);
+            questionCountTotal = 5;
             questionCounter = savedInstanceState.getInt(KEY_QUESTION_COUNT);
             currentQuestion = questionList.get(questionCounter - 1);
             score = savedInstanceState.getInt(KEY_SCORE);
