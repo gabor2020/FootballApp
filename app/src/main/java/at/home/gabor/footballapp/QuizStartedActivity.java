@@ -16,15 +16,21 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
 public class QuizStartedActivity extends AppCompatActivity {
     private static final long COUNTDOWN_IN_MILLIS = 30000;
-
+    private static final String KEY_SCORE = "keyScore";
+    private static final String KEY_QUESTION_COUNT = "keyQuestionCount";
+    private static final String KEY_MILLIS_LEFT = "keyMillisLeft";
+    private static final String KEY_ANSWERED = "keyAnswered";
+    private static final String KEY_QUESTION_LIST = "keyQuestionList";
 
     private TextView textViewQuestion;
     private TextView textViewScore;
@@ -51,7 +57,7 @@ public class QuizStartedActivity extends AppCompatActivity {
     private int score;
     private boolean answered;
 
-    private List<Question> questionList;
+    private ArrayList<Question> questionList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,22 +78,36 @@ public class QuizStartedActivity extends AppCompatActivity {
 
         textColorDefaultRb = rb1.getTextColors();
         textColorDefaultCd = textViewCountDown.getTextColors();
-
-        QuizDbHelper dbHelper = new QuizDbHelper(this);
-
-        String currentLocale = getResources().getConfiguration().locale.toString();
-
-        if (currentLocale.equals("hu")){
-            questionList = dbHelper.getAllQuestionsHun();
-        } else if (currentLocale.equals("en")){
-            questionList = dbHelper.getAllQuestionsEng();
-        } else {
-            questionList = dbHelper.getAllQuestions();
-        }
         questionCountTotal = 5;
-        Collections.shuffle(questionList);
 
-        showNextQuestion();
+        if (savedInstanceState == null) {
+            QuizDbHelper dbHelper = new QuizDbHelper(this);
+            String currentLocale = getResources().getConfiguration().locale.toString();
+            if (currentLocale.equals("hu")) {
+                questionList = dbHelper.getAllQuestionsHun();
+            } else if (currentLocale.equals("en")) {
+                questionList = dbHelper.getAllQuestionsEng();
+            } else {
+                questionList = dbHelper.getAllQuestions();
+            }
+            Collections.shuffle(questionList);
+
+            showNextQuestion();
+        } else {
+            questionList = savedInstanceState.getParcelableArrayList(KEY_QUESTION_LIST);
+            questionCounter = savedInstanceState.getInt(KEY_QUESTION_COUNT);
+            currentQuestion = questionList.get(questionCounter - 1);
+            score = savedInstanceState.getInt(KEY_SCORE);
+            timeLeftInMillis = savedInstanceState.getLong(KEY_MILLIS_LEFT);
+            answered = savedInstanceState.getBoolean(KEY_ANSWERED);
+
+            if (!answered){
+                startCountDown();
+            } else {
+                updateCountDownText();
+                showSolution();
+            }
+        }
 
         buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,19 +209,15 @@ public class QuizStartedActivity extends AppCompatActivity {
         switch (currentQuestion.getAnswerNr()) {
             case 1:
                 rb1.setTextColor(getResources().getColor(R.color.colorAccent));
-                textViewQuestion.setText(R.string.text_answer1_correct);
                 break;
             case 2:
                 rb2.setTextColor(getResources().getColor(R.color.colorAccent));
-                textViewQuestion.setText(R.string.text_answer2_correct);
                 break;
             case 3:
                 rb3.setTextColor(getResources().getColor(R.color.colorAccent));
-                textViewQuestion.setText(R.string.text_answer3_correct);
                 break;
             case 4:
                 rb4.setTextColor(getResources().getColor(R.color.colorAccent));
-                textViewQuestion.setText(R.string.text_answer4_correct);
         }
 
         if (questionCounter < questionCountTotal) {
@@ -212,6 +228,7 @@ public class QuizStartedActivity extends AppCompatActivity {
     }
 
     private void finishQuiz() {
+        finish();
         startResultActivity(score);
     }
 
@@ -241,4 +258,13 @@ public class QuizStartedActivity extends AppCompatActivity {
         res.updateConfiguration(conf, dm);
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY_SCORE, score);
+        outState.putInt(KEY_QUESTION_COUNT, questionCounter);
+        outState.putLong(KEY_MILLIS_LEFT, timeLeftInMillis);
+        outState.putBoolean(KEY_ANSWERED, answered);
+        outState.putParcelableArrayList(KEY_QUESTION_LIST, questionList);
+    }
 }

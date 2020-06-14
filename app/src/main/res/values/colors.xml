@@ -6,6 +6,6 @@
     <color name="colorBackground">#D9F6CF</color>
     <color name="colorAccentOriginal">#03DAC5</color>
     <color name="colorBackgroundOriginal">#DBE2FB</color>
-
+    <color name="colorTextBackground">#F1F8EF</color>
     <color name="black_overlay">#66000000</color>
 </resources>
