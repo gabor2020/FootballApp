@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:text="@string/text_score_zero"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -83,11 +84,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <!-- <RadioButton
+        <RadioButton
             android:id="@+id/radio_button4"
-            android:text="Antwort4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>-->
+            android:layout_height="wrap_content" />
 
 
     </RadioGroup>

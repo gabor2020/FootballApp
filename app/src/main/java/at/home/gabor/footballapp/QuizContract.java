@@ -12,6 +12,7 @@ final class QuizContract {
         static final String COLUMN_OPTION1 = "option1";
         static final String COLUMN_OPTION2 = "option2";
         static final String COLUMN_OPTION3 = "option3";
+        static final String COLUMN_OPTION4 = "option4";
         static final String COLUMN_ANSWER_NR = "answer_nr";
     }
 
@@ -21,6 +22,7 @@ final class QuizContract {
         static final String COLUMN_OPTION1 = "option1";
         static final String COLUMN_OPTION2 = "option2";
         static final String COLUMN_OPTION3 = "option3";
+        static final String COLUMN_OPTION4 = "option4";
         static final String COLUMN_ANSWER_NR = "answer_nr";
     }
 
@@ -30,6 +32,7 @@ final class QuizContract {
         static final String COLUMN_OPTION1 = "option1";
         static final String COLUMN_OPTION2 = "option2";
         static final String COLUMN_OPTION3 = "option3";
+        static final String COLUMN_OPTION4 = "option4";
         static final String COLUMN_ANSWER_NR = "answer_nr";
     }
 }

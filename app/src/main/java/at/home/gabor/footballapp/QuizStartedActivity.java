@@ -1,10 +1,14 @@
 package at.home.gabor.footballapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -30,6 +34,7 @@ public class QuizStartedActivity extends AppCompatActivity {
     private RadioButton rb1;
     private RadioButton rb2;
     private RadioButton rb3;
+    private RadioButton rb4;
     private Button buttonConfirmNext;
 
     private ColorStateList textColorDefaultRb;
@@ -51,6 +56,7 @@ public class QuizStartedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadPrefs();
         setContentView(R.layout.activity_quiz_started);
 
         textViewQuestion = findViewById(R.id.text_view_question);
@@ -61,6 +67,7 @@ public class QuizStartedActivity extends AppCompatActivity {
         rb1 = findViewById(R.id.radio_button1);
         rb2 = findViewById(R.id.radio_button2);
         rb3 = findViewById(R.id.radio_button3);
+        rb4 = findViewById(R.id.radio_button4);
         buttonConfirmNext = findViewById(R.id.button_confirm_next);
 
         textColorDefaultRb = rb1.getTextColors();
@@ -77,7 +84,7 @@ public class QuizStartedActivity extends AppCompatActivity {
         } else {
             questionList = dbHelper.getAllQuestions();
         }
-        questionCountTotal = questionList.size();
+        questionCountTotal = 5;
         Collections.shuffle(questionList);
 
         showNextQuestion();
@@ -86,7 +93,7 @@ public class QuizStartedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!answered) {
-                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()) {
+                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked()){
                         checkAnswer();
                     } else {
                         Toast.makeText(QuizStartedActivity.this, getString(R.string.select_answer), Toast.LENGTH_SHORT).show();
@@ -102,6 +109,7 @@ public class QuizStartedActivity extends AppCompatActivity {
         rb1.setTextColor(textColorDefaultRb);
         rb2.setTextColor(textColorDefaultRb);
         rb3.setTextColor(textColorDefaultRb);
+        rb4.setTextColor(textColorDefaultRb);
         rbGroup.clearCheck();
 
         if (questionCounter < questionCountTotal) {
@@ -111,6 +119,7 @@ public class QuizStartedActivity extends AppCompatActivity {
             rb1.setText(currentQuestion.getOption1());
             rb2.setText(currentQuestion.getOption2());
             rb3.setText(currentQuestion.getOption3());
+            rb4.setText(currentQuestion.getOption4());
 
             questionCounter++;
             textViewQuestionCount.setText(getString(R.string.text_question_nr) + questionCounter + getString(R.string.divider) + questionCountTotal);
@@ -175,6 +184,7 @@ public class QuizStartedActivity extends AppCompatActivity {
         rb1.setTextColor(Color.RED);
         rb2.setTextColor(Color.RED);
         rb3.setTextColor(Color.RED);
+        rb4.setTextColor(Color.RED);
 
         switch (currentQuestion.getAnswerNr()) {
             case 1:
@@ -189,6 +199,9 @@ public class QuizStartedActivity extends AppCompatActivity {
                 rb3.setTextColor(getResources().getColor(R.color.colorAccent));
                 textViewQuestion.setText(R.string.text_answer3_correct);
                 break;
+            case 4:
+                rb4.setTextColor(getResources().getColor(R.color.colorAccent));
+                textViewQuestion.setText(R.string.text_answer4_correct);
         }
 
         if (questionCounter < questionCountTotal) {
@@ -214,6 +227,18 @@ public class QuizStartedActivity extends AppCompatActivity {
         if (countDownTimer != null){
             countDownTimer.cancel();
         }
+    }
+
+    String localeCode;
+
+    public void loadPrefs (){
+        SharedPreferences prefs = getSharedPreferences(MainActivity.SHARED_PREFS, MODE_PRIVATE);
+        localeCode = prefs.getString(MainActivity.KEY_LANGUAGE, "de");
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.setLocale(new Locale(localeCode.toLowerCase()));
+        res.updateConfiguration(conf, dm);
     }
 
 }

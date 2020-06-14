@@ -36,6 +36,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 QuestionsTable.COLUMN_OPTION1 + " TEXT, " +
                 QuestionsTable.COLUMN_OPTION2 + " TEXT, " +
                 QuestionsTable.COLUMN_OPTION3 + " TEXT, " +
+                QuestionsTable.COLUMN_OPTION4 + " TEXT, " +
                 QuestionsTable.COLUMN_ANSWER_NR + " INTEGER" + ")";
 
         final String SQL_CREATE_QUESTIONS_TABLE_HUN = "CREATE TABLE " +
@@ -45,6 +46,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 QuestionsTableHun.COLUMN_OPTION1 + " TEXT, " +
                 QuestionsTableHun.COLUMN_OPTION2 + " TEXT, " +
                 QuestionsTableHun.COLUMN_OPTION3 + " TEXT, " +
+                QuestionsTableHun.COLUMN_OPTION4 + " TEXT, " +
                 QuestionsTableHun.COLUMN_ANSWER_NR + " INTEGER" + ")";
 
         final String SQL_CREATE_QUESTIONS_TABLE_ENG = "CREATE TABLE " +
@@ -54,6 +56,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 QuestionsTableEng.COLUMN_OPTION1 + " TEXT, " +
                 QuestionsTableEng.COLUMN_OPTION2 + " TEXT, " +
                 QuestionsTableEng.COLUMN_OPTION3 + " TEXT, " +
+                QuestionsTableEng.COLUMN_OPTION4 + " TEXT, " +
                 QuestionsTableEng.COLUMN_ANSWER_NR + " INTEGER" + ")";
 
         db.execSQL(SQL_CREATE_QUESTIONS_TABLE);
@@ -75,41 +78,41 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
 
     private void fillQuestionsTable() {
-        Question q1 = new Question("A ist richtig", "A", "B", "C", 1);
+        Question q1 = new Question("A ist richtig", "A", "B", "C", "D", 1);
         addQuestion(q1);
-        Question q2 = new Question("B ist richtig", "A", "B", "C", 2);
+        Question q2 = new Question("B ist richtig", "A", "B", "C", "D",2);
         addQuestion(q2);
-        Question q3 = new Question("C ist richtig", "A", "B", "C", 3);
+        Question q3 = new Question("C ist richtig", "A", "B", "C", "D",3);
         addQuestion(q3);
-        Question q4 = new Question("A ist richtig wieder", "A", "B", "C", 1);
+        Question q4 = new Question("A ist richtig wieder", "A", "B", "C", "D",1);
         addQuestion(q4);
-        Question q5 = new Question("B ist richtig wieder", "A", "B", "C", 2);
+        Question q5 = new Question("B ist richtig wieder", "A", "B", "C", "D",2);
         addQuestion(q5);
     }
 
     private void fillQuestionsTableHun() {
-        Question q1 = new Question("A a helyes", "A", "B", "C", 1);
+        Question q1 = new Question("A a helyes", "A", "B", "C", "D",1);
         addQuestionHun(q1);
-        Question q2 = new Question("B a helyes", "A", "B", "C", 2);
+        Question q2 = new Question("B a helyes", "A", "B", "C", "D",2);
         addQuestionHun(q2);
-        Question q3 = new Question("C a helyes", "A", "B", "C", 3);
+        Question q3 = new Question("C a helyes", "A", "B", "C", "D",3);
         addQuestionHun(q3);
-        Question q4 = new Question("A a helyes megint", "A", "B", "C", 1);
+        Question q4 = new Question("A a helyes megint", "A", "B", "C", "D",1);
         addQuestionHun(q4);
-        Question q5 = new Question("B a helyes megint", "A", "B", "C", 2);
+        Question q5 = new Question("B a helyes megint", "A", "B", "C", "D",2);
         addQuestionHun(q5);
     }
 
     private void fillQuestionsTableEng() {
-        Question q1 = new Question("A is correct", "A", "B", "C", 1);
+        Question q1 = new Question("A is correct", "A", "B", "C", "D",1);
         addQuestionEng(q1);
-        Question q2 = new Question("B is correct", "A", "B", "C", 2);
+        Question q2 = new Question("B is correct", "A", "B", "C", "D",2);
         addQuestionEng(q2);
-        Question q3 = new Question("C is correct", "A", "B", "C", 3);
+        Question q3 = new Question("C is correct", "A", "B", "C", "D",3);
         addQuestionEng(q3);
-        Question q4 = new Question("A is correct again", "A", "B", "C", 1);
+        Question q4 = new Question("A is correct again", "A", "B", "C", "D",1);
         addQuestionEng(q4);
-        Question q5 = new Question("B is correct again", "A", "B", "C", 2);
+        Question q5 = new Question("B is correct again", "A", "B", "C", "D",2);
         addQuestionEng(q5);
     }
 
@@ -119,6 +122,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         cv.put(QuestionsTable.COLUMN_OPTION1, question.getOption1());
         cv.put(QuestionsTable.COLUMN_OPTION2, question.getOption2());
         cv.put(QuestionsTable.COLUMN_OPTION3, question.getOption3());
+        cv.put(QuestionsTable.COLUMN_OPTION4, question.getOption4());
         cv.put(QuestionsTable.COLUMN_ANSWER_NR, question.getAnswerNr());
         db.insert(QuestionsTable.TABLE_NAME, null, cv);
     }
@@ -129,6 +133,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         cv.put(QuestionsTableHun.COLUMN_OPTION1, question.getOption1());
         cv.put(QuestionsTableHun.COLUMN_OPTION2, question.getOption2());
         cv.put(QuestionsTableHun.COLUMN_OPTION3, question.getOption3());
+        cv.put(QuestionsTableHun.COLUMN_OPTION4, question.getOption4());
         cv.put(QuestionsTableHun.COLUMN_ANSWER_NR, question.getAnswerNr());
         db.insert(QuestionsTableHun.TABLE_NAME, null, cv);
     }
@@ -139,6 +144,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         cv.put(QuestionsTableEng.COLUMN_OPTION1, question.getOption1());
         cv.put(QuestionsTableEng.COLUMN_OPTION2, question.getOption2());
         cv.put(QuestionsTableEng.COLUMN_OPTION3, question.getOption3());
+        cv.put(QuestionsTableEng.COLUMN_OPTION4, question.getOption4());
         cv.put(QuestionsTableEng.COLUMN_ANSWER_NR, question.getAnswerNr());
         db.insert(QuestionsTableEng.TABLE_NAME, null, cv);
     }
@@ -153,19 +159,18 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
         if (c.moveToFirst()) {
             do {
-                Question question = new Question();
+                Question question = new Question("A ist richtig", "A", "B", "C", "D", 1);
                 question.setQuestion(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_QUESTION)));
                 question.setOption1(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION1)));
                 question.setOption2(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION2)));
                 question.setOption3(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION3)));
+                question.setOption4(c.getString(c.getColumnIndex(QuestionsTableHun.COLUMN_OPTION4)));
                 question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTableHun.COLUMN_ANSWER_NR)));
                 questionList.add(question);
             } while (c.moveToNext());
         }
 
         c.close();
-
-
         return questionList;
     }
 
@@ -178,19 +183,18 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
         if (c.moveToFirst()) {
             do {
-                Question question = new Question();
+                Question question = new Question("A ist richtig", "A", "B", "C", "D", 1);
                 question.setQuestion(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_QUESTION)));
                 question.setOption1(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION1)));
                 question.setOption2(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION2)));
                 question.setOption3(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION3)));
+                question.setOption4(c.getString(c.getColumnIndex(QuestionsTableEng.COLUMN_OPTION4)));
                 question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTableEng.COLUMN_ANSWER_NR)));
                 questionList.add(question);
             } while (c.moveToNext());
         }
 
         c.close();
-
-
         return questionList;
     }
 
@@ -203,19 +207,18 @@ public class QuizDbHelper extends SQLiteOpenHelper {
 
         if (c.moveToFirst()) {
             do {
-                Question question = new Question();
+                Question question = new Question("A ist richtig", "A", "B", "C", "D", 1);
                 question.setQuestion(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_QUESTION)));
                 question.setOption1(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION1)));
                 question.setOption2(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION2)));
                 question.setOption3(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION3)));
+                question.setOption4(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION4)));
                 question.setAnswerNr(c.getInt(c.getColumnIndex(QuestionsTable.COLUMN_ANSWER_NR)));
                 questionList.add(question);
             } while (c.moveToNext());
         }
 
         c.close();
-
-
         return questionList;
     }
 
