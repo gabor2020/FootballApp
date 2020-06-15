@@ -119,7 +119,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q20);
         Question q21 = new Question("Welcher Spieler hat dem Namen 'Il Fenomeno' von der italienischen Presse erhalten?", "Zinedine Zidane", "Ronaldo", "Pelé", "Luis Suárez",2);
         addQuestion(q21);
-        Question q22 = new Question("In welchem WM Spiel schoß Diego Maradona das berühmte 'Hand Gottes' Tor?", "1986 Argentinien gegen England", "1982 Argentinien gegen Belgien", "1982 Argentinien gegen Brasilien", "1986 Argentinien gegen Deutschland",1);
+        Question q22 = new Question("In welchem WM Spiel schoß Diego Maradona das berühmte 'Hand Gottes' Tor?", "1986 Argentinien-England", "1982 Argentinien-Belgien", "1982 Argentinien-Brasilien", "1986 Argentinien-Deutschland",1);
         addQuestion(q22);
     }
 

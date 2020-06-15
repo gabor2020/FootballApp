@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FootballApp</string>
-    <string name="title_top">All-time best 5 players</string>
+    <string name="title_top">All-time 5 best players</string>
     <string name="select_top">Please select player</string>
     <string name="image_content_description_top">Player face</string>
     <string name="player_not_selected">Please select one</string>
@@ -23,7 +23,7 @@
     <string name="description_pele">The South American wunderkind won the World Cup three times with the Brazilian national side. The former striker capped 92 times holds the record of most scored goals in the Brazilian team with 77 goals. Pelé won with his team FC Santos in 17 years altogether 26 national and international titles.</string>
     <string name="description_maradona">Diega Armando Maradona is considered as one of the best football players in history. He led his Argentinian national team as captain to win the 1986 World Cup. Altogether he participated on four World Cups and scored 34 goals in 91 games.</string>
     <string name="description_ronaldo">Trained by the youth academy of Sportind Lisboa, Cristiano Ronaldo transferred at the age of 18 to Manchester United where he became a world class footballer. He is the only player ever to win the English, Spanish and Italian champions title as well as named Player of the year in all three countries.</string>
-    <string name="description_messi">Consider by many experts the greatest player of all times, Lionel Messi is with six wins the record title holder of France Football\'s prestigious Ballon D\'Or award. With FC Barcelona he won among others four Champions League, ten Spanish League, and six Spanish Cup titles.</string>
+    <string name="description_messi">Considered by many experts the greatest player of all times, Lionel Messi is with six wins the record title holder of France Football\'s prestigious Ballon D\'Or award. With FC Barcelona he won among others four Champions League, ten Spanish League, and six Spanish Cup titles.</string>
     <string name="era1_description">The sport became ever more popular in the private schools and universities of England. In 1857 the first Club for Association Football, FC Sheffield was created. Because of the founding if Football Association (FA) in London in 1863 and the creation of the first football rulebook there, England is considered the birthplace of football.</string>
     <string name="era2_description">On continental Europe football set foot first in Switzerland. From there it was exported to the neighbouring countries: In 1909 the swiss-rooted club Stade Helvétique Marseille won the French championship, the FC Barcelona was founded by swissman Joan Gamper. As the nationalistically oriented Milan Cricket and Football Club didn\'t accept foreigners, swiss and Italian players founded the new club Inter Milan.</string>
     <string name="era3_description">The first professional leagues started in the interwar period. With the introduction of a Profi-League in 1924 Austria became the first nation on continental Europe to have an event for paid players. Three years later the Austrian Football Association initiated the first notable international event for club teams in form of the Central European Cup. This served as a predecessor of today\'s major European Cups like the UEFA Champions League.</string>
