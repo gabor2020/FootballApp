@@ -101,6 +101,26 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestion(q11);
         Question q12 = new Question("Wer spielte im WM-Finale 1938?", "Österreich gegen Frankreich", "Ungarn gegen Italien", "Schweden gegen Schweiz", "Italien gegen Brasilien",2);
         addQuestion(q12);
+        Question q13 = new Question("Welche Mannschaft gewann die UEFA Europa League am häufigsten?", "Atletico Madrid", "FC Sevilla", "FC Liverpool", "Juventus Turin",2);
+        addQuestion(q13);
+        Question q14 = new Question("Welche Mannschaft gewann 2012/2013 zum 5. Mal Die UEFA Champions League?", "FC Bayern München", "Real Madrid", "FC Barcelona", "Inter Mailand",1);
+        addQuestion(q14);
+        Question q15 = new Question("Wie oft hat Real Madrid die Champions League gewonnen?", "7 Mal", "13 Mal", "15 Mal", "9 Mal",2);
+        addQuestion(q15);
+        Question q16 = new Question("Welcher Spieler gilt als Rekordtorschützer der UEFA Champions League?", "Cristiano Ronaldo", "Paolo Maldini", "Iker Casillas", "Lionel Messi",1);
+        addQuestion(q16);
+        Question q17 = new Question("Wer wurde Torschützenkönig der deutschen Fußballbundesliga 2018/19?", "Robert Lewandownski", "Thomas Müller", "Marco Reus", "Timo Werner",1);
+        addQuestion(q17);
+        Question q18 = new Question("Wer ist der Trainer der österreichischen Fußballnationalmannschaft?", "Franco Foda", "Marcel Koller", "Hans Krankl", "Dietmar Constantini",1);
+        addQuestion(q18);
+        Question q19 = new Question("Welche Mannschaft ist Rekordmeister der österreichischen Bundesliga?", "SK Rapid Wien", "FK Austria Wien", "FC Red Bull Salzburg", "FC Tirol Inssbruck",1);
+        addQuestion(q19);
+        Question q20 = new Question("Wie oft gewann SK Sturm Graz die österreichische Fußballmeisterschaft?", "5 mal", "2 Mal", "3 Mal", "1 Mal",3);
+        addQuestion(q20);
+        Question q21 = new Question("Welcher Spieler hat dem Namen 'Il Fenomeno' von der italienischen Presse erhalten?", "Zinedine Zidane", "Ronaldo", "Pelé", "Luis Suárez",2);
+        addQuestion(q21);
+        Question q22 = new Question("In welchem WM Spiel schoß Diego Maradona das berühmte 'Hand Gottes' Tor?", "1986 Argentinien gegen England", "1982 Argentinien gegen Belgien", "1982 Argentinien gegen Brasilien", "1986 Argentinien gegen Deutschland",1);
+        addQuestion(q22);
     }
 
     private void fillQuestionsTableHun() {
@@ -128,6 +148,26 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestionHun(q11);
         Question q12 = new Question("Milyen mérkőzést játszottak az 1938-as Világbajnokság döntőjében?", "Ausztria-Franciaország", "Magyarország-Olaszország", "Svédország-Svájc", "Olaszország-Brazília",2);
         addQuestionHun(q12);
+        Question q13 = new Question("Melyik csapat nyerte legtöbbször az UEFA Európa Ligát?", "Atletico Madrid", "Sevilla", "Liverpool", "Juventus",2);
+        addQuestionHun(q13);
+        Question q14 = new Question("Melyik csapat nyerte meg 2012/13-ban története során ötödször a Bajnokok ligáját?", "FC Bayern München", "Real Madrid", "FC Barcelona", "Internazionale",1);
+        addQuestionHun(q14);
+        Question q15 = new Question("Hányszor nyerte meg a Real Madrid a Bajnokok ligáját?", "Hétszer", "Tizenháromszor", "Tizenötször", "Kilencszer",2);
+        addQuestionHun(q15);
+        Question q16 = new Question("Ki lőtte a legtöbb gólt a Bajnokok ligája történetében?", "Cristiano Ronaldo", "Paolo Maldini", "Iker Casillas", "Lionel Messi",1);
+        addQuestionHun(q16);
+        Question q17 = new Question("Ki volt a Bundesliga gólkirálya 2018/19-ben?", "Robert Lewandownski", "Thomas Müller", "Marco Reus", "Timo Werner",1);
+        addQuestionHun(q17);
+        Question q18 = new Question("Ki az osztrák válogatott szövetségi kapitánya?", "Franco Foda", "Marcel Koller", "Hans Krankl", "Dietmar Constantini",1);
+        addQuestionHun(q18);
+        Question q19 = new Question("Ki nyerte legtöbbször az osztrák bajnokságot?", "SK Rapid Wien", "FK Austria Wien", "FC Red Bull Salzburg", "FC Tirol Inssbruck",1);
+        addQuestionHun(q19);
+        Question q20 = new Question("Hányszor volt osztrák bajnok az SK Sturm Graz?", "Ötször", "Kétszer", "Háromszor", "Egyszer",3);
+        addQuestionHun(q20);
+        Question q21 = new Question("Melyik játékos kapta az olasz sajtótól az 'Il Fenomeno' becenevet?", "Zinedine Zidane", "Ronaldo", "Pelé", "Luis Suárez",2);
+        addQuestionHun(q21);
+        Question q22 = new Question("Melyik Vb-mérkőzésen szerezte Diego Maradona hírhedt 'Isten keze' gólját?", "1986 Argentína-Anglia", "1982 Argentína-belgium", "1982 Argentína-Brazília", "1986 Argentína-Németország",1);
+        addQuestionHun(q22);
     }
 
     private void fillQuestionsTableEng() {
@@ -155,6 +195,26 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         addQuestionEng(q11);
         Question q12 = new Question("Who played the final of the World Cup 1938?", "Austria vs France", "Hungary vs Italy", "Sweden vs Switzerland", "Italy vs Brazil",2);
         addQuestionEng(q12);
+        Question q13 = new Question("Who has won the most Europa League titles?", "Atletico Madrid", "Sevilla FC", "Liverpool FC", "Juventus",2);
+        addQuestionEng(q13);
+        Question q14 = new Question("Which team won the Champions League in 2012/13 for the 5th time in their history?", "FC Bayern Munich", "Real Madrid", "FC Barcelona", "Inter Milan",1);
+        addQuestionEng(q14);
+        Question q15 = new Question("How many times won Real Madrid the Champions League?", "7", "13", "15", "9",2);
+        addQuestionEng(q15);
+        Question q16 = new Question("Who shot the most goals in the Champions League?", "Cristiano Ronaldo", "Paolo Maldini", "Iker Casillas", "Lionel Messi",1);
+        addQuestionEng(q16);
+        Question q17 = new Question("Who scored the most goals in the 2018/19 Bundesliga season?", "Robert Lewandownski", "Thomas Müller", "Marco Reus", "Timo Werner",1);
+        addQuestionEng(q17);
+        Question q18 = new Question("Who is the manager of the Austrian national team?", "Franco Foda", "Marcel Koller", "Hans Krankl", "Dietmar Constantini",1);
+        addQuestionEng(q18);
+        Question q19 = new Question("Which team won the Austrian Bundesliga the most times?", "SK Rapid Wien", "FK Austria Wien", "FC Red Bull Salzburg", "FC Tirol Inssbruck",1);
+        addQuestionEng(q19);
+        Question q20 = new Question("How many times won SK Sturm Graz the Austrian Bundesliga?", "5 times", "2 times", "3 times", "1 time",3);
+        addQuestionEng(q20);
+        Question q21 = new Question("Who was nicknamed 'Il Fenomeno' by the Italian press?", "Zinedine Zidane", "Ronaldo", "Pelé", "Luis Suárez",2);
+        addQuestionEng(q21);
+        Question q22 = new Question("At which World Cup game did Diego Maradona shoot his infamous 'Hand of God' goal?", "1986 Argentina vs England", "1982 Argentina vs Belgium", "1982 Argentina vs Brazil", "1986 Argentina vs Germany",1);
+        addQuestionEng(q22);
     }
 
     private void addQuestion(Question question) {

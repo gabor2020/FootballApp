@@ -90,8 +90,8 @@ public class QuizStartedActivity extends AppCompatActivity {
             } else {
                 questionList = dbHelper.getAllQuestions();
             }
-            questionCountTotal = 5;
             Collections.shuffle(questionList);
+            questionCountTotal = 5;
 
             showNextQuestion();
         } else {
