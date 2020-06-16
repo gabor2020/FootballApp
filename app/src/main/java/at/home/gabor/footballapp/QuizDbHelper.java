@@ -72,6 +72,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + QuestionsTable.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + QuestionsTableHun.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + QuestionsTableEng.TABLE_NAME);
         onCreate(db);
     }
 
