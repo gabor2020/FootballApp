@@ -11,7 +11,7 @@
                 android:id="@+id/itemEn"
                 android:icon="@drawable/ukflag"
                 android:title="English"
-                app:showAsAction="always" />
+                app:showAsAction="ifRoom" />
             <item
                 android:id="@+id/itemGe"
                 android:icon="@drawable/austriaflag"
@@ -24,37 +24,6 @@
                 app:showAsAction="always" />
         </menu>
     </item>
-    <item
-        android:id="@+id/site_navigation1"
-        android:title="Navigation"
-        app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_navigation">
-        <menu>
-            <item
-                android:id="@+id/itemMain1"
-                android:title="@string/menu_title_main"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/itemEra1"
-                android:title="@string/menu_title_era"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/itemTop51"
-                android:title="@string/menu_title_top"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/itemMedia1"
-                android:title="@string/menu_title_media"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/itemQuiz1"
-                android:title="@string/menu_title_quiz"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/itemDrawerTest1"
-                android:title="Drawer Activity"
-                app:showAsAction="never" />
-        </menu>
-    </item>
+
 
 </menu>

@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <group android:checkableBehavior="single"/>
 
-    <item
-        android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home"
-        android:title="@string/menu_title_main" />
-        <item
-            android:id="@+id/nav_import"
-            android:icon="@drawable/ic_menu_era"
-            android:title="@string/menu_title_era" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_title_media" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_top5"
-            android:title="@string/menu_title_top" />
-        <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_quiz"
-            android:title="@string/menu_title_quiz" />
+            <item
+                android:id="@+id/nav_home"
+                android:title="@string/menu_title_main"
+                android:icon="@drawable/ic_home"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_era"
+                android:icon="@drawable/ic_menu_era"
+                android:title="@string/menu_title_era"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_top5"
+                android:icon="@drawable/ic_menu_top5"
+                android:title="@string/menu_title_top"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_media"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/menu_title_media"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/nav_quiz"
+                android:title="@string/menu_title_quiz"
+                android:icon="@drawable/ic_menu_quiz"
+                app:showAsAction="never" />
 
 
 </menu>
