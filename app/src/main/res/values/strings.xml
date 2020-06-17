@@ -82,4 +82,6 @@
     <string name="vid_desc4">WM 2018</string>
     <string name="image_content_description_gallery7">CL Spiel</string>
     <string name="text_answer4_correct">Antwort 4 ist richtig</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 </resources>

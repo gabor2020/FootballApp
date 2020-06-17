@@ -83,6 +83,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent4 = new Intent(this, QuizActivity.class);
                 startActivity(intent4);
                 break;
+            case R.id.itemDrawerTest1:
+                Intent intent5 = new Intent(this, Home.class);
+                startActivity(intent5);
+                break;
         }
         return true;
     }

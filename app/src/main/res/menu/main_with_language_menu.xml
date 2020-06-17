@@ -50,6 +50,10 @@
                 android:id="@+id/itemQuiz1"
                 android:title="@string/menu_title_quiz"
                 app:showAsAction="never" />
+            <item
+                android:id="@+id/itemDrawerTest1"
+                android:title="Drawer Activity"
+                app:showAsAction="never" />
         </menu>
     </item>
 
