@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -132,6 +133,12 @@ public class TopActivity extends AppCompatActivity {
             case R.id.itemQuiz:
                 Intent intent4 = new Intent(this, QuizActivity.class);
                 startActivity(intent4);
+                break;
+            case R.id.itemInfo:
+                Intent intent5 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://antalgabor.squarespace.com"));
+                if (intent5.resolveActivity(getPackageManager()) != null){
+                    startActivity(intent5);
+                }
                 break;
 
         }

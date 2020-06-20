@@ -4,7 +4,7 @@
     <item
         android:id="@+id/site_navigation"
         android:icon="@drawable/ic_navigation"
-        android:title="Navigation"
+        android:title="@string/title_menu"
         app:showAsAction="ifRoom">
         <menu>
             <item
@@ -26,6 +26,10 @@
             <item
                 android:id="@+id/itemQuiz"
                 android:title="@string/menu_title_quiz"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/itemInfo"
+                android:title="@string/menu_title_info"
                 app:showAsAction="never" />
         </menu>
     </item>
