@@ -84,4 +84,5 @@
     <string name="text_answer4_correct">Antwort 4 ist richtig</string>
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="menu_title_info">Informationen</string>
 </resources>

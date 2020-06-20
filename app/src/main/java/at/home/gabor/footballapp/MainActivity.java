@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
@@ -146,6 +147,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_quiz:
                 Intent t = new Intent(MainActivity.this, QuizActivity.class);
                 startActivity(t);
+                break;
+            case R.id.nav_info:
+                Intent k = new Intent(Intent.ACTION_VIEW, Uri.parse("https://antalgabor.squarespace.com"));
+                if (k.resolveActivity(getPackageManager()) != null){
+                    startActivity(k);
+                }
                 break;
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

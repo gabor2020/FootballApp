@@ -3,31 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-            <item
-                android:id="@+id/nav_home"
-                android:title="@string/menu_title_main"
-                android:icon="@drawable/ic_home"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/nav_era"
-                android:icon="@drawable/ic_menu_era"
-                android:title="@string/menu_title_era"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/nav_top5"
-                android:icon="@drawable/ic_menu_top5"
-                android:title="@string/menu_title_top"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/nav_media"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="@string/menu_title_media"
-                app:showAsAction="never" />
-            <item
-                android:id="@+id/nav_quiz"
-                android:title="@string/menu_title_quiz"
-                android:icon="@drawable/ic_menu_quiz"
-                app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/menu_title_main"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_era"
+        android:icon="@drawable/ic_menu_era"
+        android:title="@string/menu_title_era"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_top5"
+        android:icon="@drawable/ic_menu_top5"
+        android:title="@string/menu_title_top"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_media"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="@string/menu_title_media"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_quiz"
+        android:icon="@drawable/ic_menu_quiz"
+        android:title="@string/menu_title_quiz"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/nav_info"
+        android:icon="@drawable/ic_menu_info"
+        android:title="@string/menu_title_info"
+        app:showAsAction="never" />
 
 
 </menu>
